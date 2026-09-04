@@ -51,3 +51,16 @@
       const waMsg = encodeURIComponent(`Halo WeabooCoding!\n\nNama: ${nama}\nLayanan: ${layanan}\nPesan: ${pesan}`);
       window.open(`https://wa.me/6285157558469?text=${waMsg}`, '_blank');
     }
+// Load More Portfolio
+const btnLoadMore = document.getElementById('btn-load-more');
+if (btnLoadMore) {
+  btnLoadMore.addEventListener('click', () => {
+    const hiddenCards = document.querySelectorAll('.portfolio-card.hidden');
+    hiddenCards.forEach(card => {
+      card.classList.remove('hidden');
+      card.classList.add('reveal', 'reveal-zoom');
+      setTimeout(() => card.classList.add('visible'), 50);
+    });
+    btnLoadMore.style.display = 'none';
+  });
+}

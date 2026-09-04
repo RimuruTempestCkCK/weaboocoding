@@ -770,9 +770,37 @@
       cursor: default;
     }
 
+    .portfolio-card.hidden {
+      display: none;
+    }
+
     .portfolio-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .portfolio-actions {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .btn-outline-light {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      background: transparent;
+      transition: all 0.3s ease;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
     }
 
     .p-thumb {
