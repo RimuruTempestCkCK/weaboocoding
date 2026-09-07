@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import useSEO from '../../hooks/useSEO';
 import { jasaData } from '../../data/jasaData';
+import { blogData } from '../../data/blogData';
+import { kotaData } from '../../data/kotaData';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import NotFound from '../NotFound';
@@ -9,10 +11,32 @@ import '../../style.css';
 
 function JasaDetail() {
   const { slug } = useParams();
-  const jasa = jasaData.find(j => j.id === slug);
+  
+  // Clean slug if it's a legacy .html link
+  const cleanSlug = slug.endsWith('.html') ? slug.slice(0, -5) : slug;
+
+  const jasa = jasaData.find(j => j.id === cleanSlug);
 
   if (!jasa) {
+    // Check if it's a blog post
+    if (blogData.find(b => b.id === cleanSlug)) {
+      return <Navigate to={`/blog/${cleanSlug}`} replace />;
+    }
+    // Check if it's a kota page
+    if (kotaData.find(k => k.id === cleanSlug)) {
+      return <Navigate to={`/kota/${cleanSlug}`} replace />;
+    }
+    // Check for hardcoded old root pages
+    if (cleanSlug === 'blog') return <Navigate to="/blog" replace />;
+    if (cleanSlug === 'weaboocoding') return <Navigate to="/weaboocoding" replace />;
+    if (cleanSlug === 'index') return <Navigate to="/" replace />;
+    
     return <NotFound />;
+  }
+
+  // If we found a valid jasa but the URL still has .html, redirect to clean URL
+  if (slug.endsWith('.html')) {
+    return <Navigate to={`/${cleanSlug}`} replace />;
   }
 
   useSEO({
