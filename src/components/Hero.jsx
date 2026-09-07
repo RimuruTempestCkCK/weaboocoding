@@ -12,7 +12,7 @@ export default function Hero() {
       <p className="hero-sub">WeabooCoding menyediakan jasa coding dan pembuatan website untuk pelanggan di Tangerang Selatan dan sekitarnya. Solusi tepat untuk mahasiswa, UMKM, dan perusahaan.</p>
       <div className="hero-actions">
         <a href="#contact" className="btn-hero primary">🚀 Mulai Sekarang</a>
-        <a href="#services" className="btn-hero secondary">Lihat Layanan →</a>
+        <a href="#services" className="btn-hero secondary">Lihat Layanan </a>
       </div>
       <div className="hero-stats">
         <div className="stat">

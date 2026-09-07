@@ -35,7 +35,7 @@ function Blog() {
               <div className="section-tag" style={{ fontSize: '0.8rem', marginBottom: '10px' }}>{item.tag}</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '15px' }}>{item.title}</h3>
               <p style={{ color: 'var(--text-light)', fontSize: '0.95rem', marginBottom: '20px' }}>{item.description}</p>
-              <span style={{ color: 'var(--primary)', fontWeight: '600' }}>Baca Selengkapnya &rarr;</span>
+              <span style={{ color: 'var(--primary)', fontWeight: '600' }}>Baca Selengkapnya </span>
             </div>
           </div>
         </Link>

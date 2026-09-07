@@ -80,7 +80,7 @@ function Weaboocoding() {
     <p className="hero-sub">Melayani pembuatan website, aplikasi Android/Web, joki tugas coding, dan UI/UX Design dengan hasil terbaik dan harga terjangkau.</p>
     <div className="hero-actions">
       <a href="#contact" className="btn-hero primary">🚀 Mulai Sekarang</a>
-      <a href="#services" className="btn-hero secondary">Lihat Layanan →</a>
+      <a href="#services" className="btn-hero secondary">Lihat Layanan </a>
     </div>
     <div className="hero-stats">
       <div className="stat"><div className="stat-num">200+</div><div className="stat-label">Project Selesai</div></div>
@@ -181,49 +181,49 @@ function Weaboocoding() {
       <div className="s-icon">🌐</div>
       <div className="s-title">Pembuatan Website</div>
       <p className="s-desc">Landing page, company profile, e-commerce, hingga web app custom sesuai kebutuhanmu.</p>
-      <a href="#contact" className="s-link">Pesan Sekarang →</a>
+      <a href="#contact" className="s-link">Pesan Sekarang </a>
     </div>
     <div className="service-card reveal reveal-zoom">
       <div className="s-icon">📱</div>
       <div className="s-title">Aplikasi Android/Web</div>
       <p className="s-desc">Pengembangan aplikasi mobile Android dan Progressive Web App (PWA) modern.</p>
-      <a href="#contact" className="s-link">Pesan Sekarang →</a>
+      <a href="#contact" className="s-link">Pesan Sekarang </a>
     </div>
     <div className="service-card reveal reveal-zoom">
       <div className="s-icon">🎓</div>
       <div className="s-title">Joki Tugas Coding</div>
       <p className="s-desc">Bantu tugas kuliah, skripsi, atau proyek kampus dengan berbagai bahasa pemrograman.</p>
-      <a href="#contact" className="s-link">Pesan Sekarang →</a>
+      <a href="#contact" className="s-link">Pesan Sekarang </a>
     </div>
     <div className="service-card reveal reveal-zoom">
       <div className="s-icon">🎨</div>
       <div className="s-title">UI/UX Design</div>
       <p className="s-desc">Desain antarmuka yang menarik, intuitif, dan user-friendly menggunakan Figma.</p>
-      <a href="#contact" className="s-link">Pesan Sekarang →</a>
+      <a href="#contact" className="s-link">Pesan Sekarang </a>
     </div>
     <div className="service-card reveal reveal-zoom">
       <div className="s-icon">🔧</div>
       <div className="s-title">Solve Code / Debug</div>
       <p className="s-desc">Error atau bug susah dipecahkan? Kami siap bantu debug dan perbaiki kodenya.</p>
-      <a href="#contact" className="s-link">Pesan Sekarang →</a>
+      <a href="#contact" className="s-link">Pesan Sekarang </a>
     </div>
     <div className="service-card reveal reveal-zoom">
       <div className="s-icon">📊</div>
       <div className="s-title">Database & Backend</div>
       <p className="s-desc">Perancangan database, REST API, dan backend system yang scalable dan aman.</p>
-      <a href="#contact" className="s-link">Pesan Sekarang →</a>
+      <a href="#contact" className="s-link">Pesan Sekarang </a>
     </div>
     <div className="service-card reveal reveal-zoom">
       <div className="s-icon">🤖</div>
       <div className="s-title">Integrasi AI/Chatbot</div>
       <p className="s-desc">Integrasi AI, chatbot otomatis, dan fitur machine learning ke dalam proyekmu.</p>
-      <a href="#contact" className="s-link">Pesan Sekarang →</a>
+      <a href="#contact" className="s-link">Pesan Sekarang </a>
     </div>
     <div className="service-card reveal reveal-zoom">
       <div className="s-icon">📚</div>
       <div className="s-title">Tutorial & Mentoring</div>
       <p className="s-desc">Sesi mentoring 1-on-1 dan tutorial coding dari dasar hingga level advanced.</p>
-      <a href="#contact" className="s-link">Pesan Sekarang →</a>
+      <a href="#contact" className="s-link">Pesan Sekarang </a>
     </div>
   </div>
 </section>

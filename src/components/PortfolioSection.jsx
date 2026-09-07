@@ -111,7 +111,7 @@ export default function PortfolioSection() {
       </div>
     </div>
     <div className="portfolio-actions">
-      <button id="btn-load-more" className="btn-outline-light">Selengkapnya →</button>
+      <button id="btn-load-more" className="btn-outline-light">Selengkapnya </button>
     </div>
   </section>
 
