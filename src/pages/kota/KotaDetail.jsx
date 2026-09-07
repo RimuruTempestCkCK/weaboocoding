@@ -89,13 +89,13 @@ function KotaDetail() {
       
         <div style={{ marginTop: '50px', paddingTop: '30px', borderTop: '1px solid #eee', textAlign: 'left' }}>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>Artikel & Edukasi Terbaru</h3>
-          <ul style={{ listStyleType: 'none', padding: 0, display: 'grid', gridTemplateColumns: '1fr', gap: '10px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
             {blogData.slice(0, 5).map(b => (
-              <li key={b.id}>
-                <Link to={`/blog/${b.id}`} style={{ color: 'var(--primary)', textDecoration: 'none' }}>→ {b.title}</Link>
-              </li>
+              <Link key={b.id} to={`/blog/${b.id}`} style={{ color: 'var(--primary)', textDecoration: 'none', background: 'var(--gray-50)', padding: '12px 15px', borderRadius: '8px', borderLeft: '4px solid var(--primary)', display: 'block' }}>
+                <strong style={{ color: 'var(--bg-dark)' }}>→ {b.title}</strong>
+              </Link>
             ))}
-          </ul>
+          </div>
         </div>
 
       </section>

@@ -102,15 +102,15 @@ function BlogDetail() {
           {blog.keywords}
         </div>
       
-        <div style={{ marginTop: '50px', paddingTop: '30px', borderTop: '1px solid #eee' }}>
+        <div style={{ marginTop: '50px', paddingTop: '30px', borderTop: '1px solid #eee', textAlign: 'left' }}>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>Layanan Kami di Kota Anda</h3>
-          <ul style={{ listStyleType: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
             {kotaData.slice(0, 8).map(k => (
-              <li key={k.id}>
-                <Link to={`/kota/${k.id}`} style={{ color: 'var(--primary)', textDecoration: 'none' }}>→ Jasa Web & Coding di {k.name}</Link>
-              </li>
+              <Link key={k.id} to={`/kota/${k.id}`} style={{ color: 'var(--primary)', textDecoration: 'none', background: 'var(--gray-50)', padding: '12px 15px', borderRadius: '8px', borderLeft: '4px solid var(--primary)', display: 'block' }}>
+                <strong style={{ color: 'var(--bg-dark)' }}>→ Jasa Web & Coding di {k.name}</strong>
+              </Link>
             ))}
-          </ul>
+          </div>
         </div>
 
       </article>
