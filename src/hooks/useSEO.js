@@ -28,6 +28,7 @@ export default function useSEO({ title, description, keywords, schema, image }) 
     setMetaTag('name', 'twitter:image', targetImage);
     setMetaTag('name', 'twitter:card', 'summary_large_image');
     setMetaTag('property', 'og:type', 'website');
+    setMetaTag('property', 'og:site_name', 'WeabooCoding');
     
     // Update URL
     setMetaTag('property', 'og:url', window.location.href);
