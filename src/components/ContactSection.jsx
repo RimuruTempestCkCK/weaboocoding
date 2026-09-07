@@ -26,7 +26,15 @@ export default function ContactSection() {
           </div>
 
           <div className="reveal reveal-right">
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={(e) => {
+              e.preventDefault();
+              const nama = document.getElementById('nama').value;
+              const layanan = document.getElementById('layanan').value;
+              const pesan = document.getElementById('pesan').value;
+              
+              const text = `Halo WeabooCoding! 👋%0A%0APerkenalkan saya *${nama}*.%0ASaya tertarik dengan layanan *${layanan}*.%0A%0A*Deskripsi Project:*%0A${pesan}%0A%0AMohon info lebih lanjut ya, terima kasih!`;
+              window.open(`https://wa.me/6285157558469?text=${text}`, '_blank');
+            }}>
               <div className="form-group">
                 <label htmlFor="nama">Nama Lengkap</label>
                 <input type="text" id="nama" placeholder="Masukkan nama kamu" required />
@@ -34,13 +42,13 @@ export default function ContactSection() {
 
               <div className="form-group">
                 <label htmlFor="layanan">Jenis Layanan</label>
-                <input type="text" id="layanan" placeholder="Website, Aplikasi, Tugas, dll." />
+                <input type="text" id="layanan" placeholder="Website, Aplikasi, Tugas, dll." required />
               </div>
               <div className="form-group">
                 <label htmlFor="pesan">Deskripsi Project</label>
                 <textarea id="pesan" placeholder="Ceritakan kebutuhan projectmu secara singkat..." required></textarea>
               </div>
-              <button type="submit" className="btn-hero primary" style={{ alignSelf: 'flex-start' }}>Kirim Pesan 🚀</button>
+              <button type="submit" className="btn-hero primary" style={{ alignSelf: 'flex-start' }}>Kirim via WhatsApp 🚀</button>
             </form>
           </div>
         </div>
