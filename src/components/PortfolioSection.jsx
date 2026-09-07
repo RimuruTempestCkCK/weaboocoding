@@ -14,7 +14,7 @@ export default function PortfolioSection() {
 
     <div className="portfolio-grid">
       <div className="portfolio-card reveal reveal-zoom">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">E-Commerce</div>
           <div className="p-name">FashionHub Online</div>
@@ -22,7 +22,7 @@ export default function PortfolioSection() {
         </div>
       </div>
       <div className="portfolio-card reveal reveal-zoom">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">Sistem Informasi</div>
           <div className="p-name">KlinikCare Digital</div>
@@ -30,7 +30,7 @@ export default function PortfolioSection() {
         </div>
       </div>
       <div className="portfolio-card reveal reveal-zoom">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">Android App</div>
           <div className="p-name">Absensi GeoTrack</div>
@@ -38,7 +38,7 @@ export default function PortfolioSection() {
         </div>
       </div>
       <div className="portfolio-card reveal reveal-zoom">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">Joki Skripsi</div>
           <div className="p-name">Sistem Pakar AI</div>
@@ -46,7 +46,7 @@ export default function PortfolioSection() {
         </div>
       </div>
       <div className="portfolio-card reveal reveal-zoom">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">Web Company Profile</div>
           <div className="p-name">Cafe & Resto "Bite"</div>
@@ -54,7 +54,7 @@ export default function PortfolioSection() {
         </div>
       </div>
       <div className="portfolio-card reveal reveal-zoom">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">Dashboard Admin</div>
           <div className="p-name">SalesPro Analytics</div>
@@ -62,7 +62,7 @@ export default function PortfolioSection() {
         </div>
       </div>
       <div className="portfolio-card hidden">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">Web Portal</div>
           <div className="p-name">Portal Sekolah Terpadu</div>
@@ -70,7 +70,7 @@ export default function PortfolioSection() {
         </div>
       </div>
       <div className="portfolio-card hidden">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">Logistik App</div>
           <div className="p-name">KurirKu Tracking</div>
@@ -78,7 +78,7 @@ export default function PortfolioSection() {
         </div>
       </div>
       <div className="portfolio-card hidden">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">Web Booking</div>
           <div className="p-name">Staycation Villa</div>
@@ -86,7 +86,7 @@ export default function PortfolioSection() {
         </div>
       </div>
       <div className="portfolio-card hidden">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">Solve Code / Debug</div>
           <div className="p-name">Fix Bug Aplikasi POS</div>
@@ -94,7 +94,7 @@ export default function PortfolioSection() {
         </div>
       </div>
       <div className="portfolio-card hidden">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">UI/UX Design</div>
           <div className="p-name">Redesign App Bank</div>
@@ -102,7 +102,7 @@ export default function PortfolioSection() {
         </div>
       </div>
       <div className="portfolio-card hidden">
-        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
+        <div className="p-thumb" style={{ padding: '0', overflow: 'hidden' }}><img loading="lazy" src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80" alt="Portfolio Item" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .3s' }}   /></div>
         <div className="p-body">
           <div className="p-tag">Backend API</div>
           <div className="p-name">Smart Home Controller</div>

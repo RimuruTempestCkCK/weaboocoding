@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import useSEO from '../../hooks/useSEO';
 import { kotaData } from '../../data/kotaData';
+import { blogData } from '../../data/blogData';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import NotFound from '../NotFound';
@@ -85,6 +86,18 @@ function KotaDetail() {
             <Link to="/kota" className="btn-hero secondary">Lihat Kota Lain</Link>
           </div>
         </div>
+      
+        <div style={{ marginTop: '50px', paddingTop: '30px', borderTop: '1px solid #eee', textAlign: 'left' }}>
+          <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>Artikel & Edukasi Terbaru</h3>
+          <ul style={{ listStyleType: 'none', padding: 0, display: 'grid', gridTemplateColumns: '1fr', gap: '10px' }}>
+            {blogData.slice(0, 5).map(b => (
+              <li key={b.id}>
+                <Link to={`/blog/${b.id}`} style={{ color: 'var(--primary)', textDecoration: 'none' }}>→ {b.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
       </section>
       <Footer />
     </>

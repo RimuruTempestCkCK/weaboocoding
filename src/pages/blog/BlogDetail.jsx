@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import useSEO from '../../hooks/useSEO';
 import { blogData } from '../../data/blogData';
+import { kotaData } from '../../data/kotaData';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import NotFound from '../NotFound';
@@ -58,7 +59,7 @@ function BlogDetail() {
           </p>
         </div>
 
-        <img src={blog.image} alt={blog.title} style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '15px', marginBottom: '40px' }} />
+        <img loading="lazy" src={blog.image} alt={blog.title} style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '15px', marginBottom: '40px' }} />
 
         <div className="blog-content" style={{ fontSize: '1.1rem' }}>
           <h2 style={{ fontSize: '1.8rem', marginTop: '40px', marginBottom: '20px', color: 'var(--bg-dark)' }}>Pengantar: Mengapa Ini Penting?</h2>
@@ -100,6 +101,18 @@ function BlogDetail() {
           <strong>SEO Target Keywords:</strong> <br/>
           {blog.keywords}
         </div>
+      
+        <div style={{ marginTop: '50px', paddingTop: '30px', borderTop: '1px solid #eee' }}>
+          <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>Layanan Kami di Kota Anda</h3>
+          <ul style={{ listStyleType: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
+            {kotaData.slice(0, 8).map(k => (
+              <li key={k.id}>
+                <Link to={`/kota/${k.id}`} style={{ color: 'var(--primary)', textDecoration: 'none' }}>→ Jasa Web & Coding di {k.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
       </article>
 
       <Footer />

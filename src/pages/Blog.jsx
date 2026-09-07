@@ -30,7 +30,7 @@ function Blog() {
       {articles.map((item, i) => (
         <Link to={`/blog/${item.id}`} key={i} style={{ textDecoration: 'none', color: 'inherit' }}>
           <div className="pricing-card reveal reveal-zoom" style={{ padding: '0', overflow: 'hidden' }}>
-            <img src={item.image} alt={item.title} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+            <img loading="lazy" src={item.image} alt={item.title} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
             <div style={{ padding: '25px' }}>
               <div className="section-tag" style={{ fontSize: '0.8rem', marginBottom: '10px' }}>{item.tag}</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '15px' }}>{item.title}</h3>
