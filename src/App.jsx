@@ -1,20 +1,13 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-import JasaCoding from './pages/JasaCoding';
-import JasaDebugging from './pages/JasaDebugging';
-import JasaPembuatanAplikasiAndroidCustom from './pages/JasaPembuatanAplikasiAndroidCustom';
-import JasaPembuatanAplikasi from './pages/JasaPembuatanAplikasi';
-import JasaPembuatanSistemInformasiUmkm from './pages/JasaPembuatanSistemInformasiUmkm';
-import JasaPembuatanWebsiteTangerangSelatan from './pages/JasaPembuatanWebsiteTangerangSelatan';
-import JasaPembuatanWebsite from './pages/JasaPembuatanWebsite';
-import JasaSistemInformasi from './pages/JasaSistemInformasi';
-import JasaUiUx from './pages/JasaUiUx';
 import Home from './pages/Home';
 import Weaboocoding from './pages/Weaboocoding';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/blog/BlogDetail';
 import KotaList from './pages/kota/KotaList';
 import KotaDetail from './pages/kota/KotaDetail';
+import JasaDetail from './pages/jasa/JasaDetail';
+import NotFound from './pages/NotFound';
 
 function LegacyScripts() {
   const location = useLocation();
@@ -138,21 +131,14 @@ function App() {
     <Router>
       <LegacyScripts />
       <Routes>
-        <Route path="/jasa-coding" element={<JasaCoding />} />
-        <Route path="/jasa-debugging" element={<JasaDebugging />} />
-        <Route path="/jasa-pembuatan-aplikasi-android-custom" element={<JasaPembuatanAplikasiAndroidCustom />} />
-        <Route path="/jasa-pembuatan-aplikasi" element={<JasaPembuatanAplikasi />} />
-        <Route path="/jasa-pembuatan-sistem-informasi-umkm" element={<JasaPembuatanSistemInformasiUmkm />} />
-        <Route path="/jasa-pembuatan-website-tangerang-selatan" element={<JasaPembuatanWebsiteTangerangSelatan />} />
-        <Route path="/jasa-pembuatan-website" element={<JasaPembuatanWebsite />} />
-        <Route path="/jasa-sistem-informasi" element={<JasaSistemInformasi />} />
-        <Route path="/jasa-ui-ux" element={<JasaUiUx />} />
         <Route path="/" element={<Home />} />
         <Route path="/weaboocoding" element={<Weaboocoding />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogDetail />} />
         <Route path="/kota" element={<KotaList />} />
         <Route path="/kota/:id" element={<KotaDetail />} />
+        <Route path="/:slug" element={<JasaDetail />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
