@@ -4,6 +4,7 @@ import useSEO from '../../hooks/useSEO';
 import { blogData } from '../../data/blogData';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import NotFound from '../NotFound';
 import '../../style.css';
 
 function BlogDetail() {
@@ -11,7 +12,7 @@ function BlogDetail() {
   const blog = blogData.find(b => b.id === slug);
 
   if (!blog) {
-    return <Navigate to="/blog" replace />;
+    return <NotFound />;
   }
 
   useSEO({

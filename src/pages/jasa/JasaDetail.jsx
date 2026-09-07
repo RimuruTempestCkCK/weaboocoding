@@ -4,6 +4,7 @@ import useSEO from '../../hooks/useSEO';
 import { jasaData } from '../../data/jasaData';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import NotFound from '../NotFound';
 import '../../style.css';
 
 function JasaDetail() {
@@ -11,7 +12,7 @@ function JasaDetail() {
   const jasa = jasaData.find(j => j.id === slug);
 
   if (!jasa) {
-    return <Navigate to="/#services" replace />;
+    return <NotFound />;
   }
 
   useSEO({

@@ -4,6 +4,7 @@ import useSEO from '../../hooks/useSEO';
 import { kotaData } from '../../data/kotaData';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import NotFound from '../NotFound';
 import '../../style.css';
 
 function KotaDetail() {
@@ -11,7 +12,7 @@ function KotaDetail() {
   const kota = kotaData.find(k => k.id === id);
 
   if (!kota) {
-    return <Navigate to="/kota" replace />;
+    return <NotFound />;
   }
 
   useSEO({
