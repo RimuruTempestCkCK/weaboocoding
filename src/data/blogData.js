@@ -1,5 +1,15 @@
 export const blogData = [
   {
+    "id": "cara-mengatasi-error-vite",
+    "title": "Cara Mengatasi Error Vite: Panduan Lengkap untuk Developer",
+    "description": "Sering mengalami error saat menggunakan Vite? Artikel ini membahas cara mengatasi error Vite yang umum terjadi saat development atau build project React dan Vue.",
+    "subtitle": "Panduan praktis mengatasi error Vite saat development dan build.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+    "keywords": "mengatasi error vite, vite error build, error vite react, cara fix error vite, tutorial vite, vite run dev error",
+    "tag": "Tutorial",
+    "content": "<h2>Mengapa Error Vite Sering Terjadi?</h2><p>Vite adalah build tool yang sangat cepat dan ringan, namun seperti tool lainnya, kadang kita menemui masalah, terutama terkait konfigurasi, cache, atau dependency. Beberapa error umum yang sering muncul antara lain <code>failed to load config</code>, masalah saat <code>npm run build</code>, atau blank screen saat dijalankan.</p><h2>Cara Mengatasi Error Vite yang Paling Umum</h2><h3>1. Hapus Folder node_modules dan package-lock.json</h3><p>Sebagian besar error aneh di Vite bisa diselesaikan dengan melakukan instalasi ulang dependency. Jalankan perintah berikut di terminal Anda:</p><pre style='background:#f4f4f4;padding:10px;border-radius:5px;'><code>rm -rf node_modules package-lock.json\nnpm install</code></pre><h3>2. Clear Cache Vite</h3><p>Vite menyimpan cache untuk mempercepat proses development. Jika Anda mengubah konfigurasi penting (seperti vite.config.js) namun tidak melihat perubahannya, coba jalankan Vite dengan flag <code>--force</code>:</p><pre style='background:#f4f4f4;padding:10px;border-radius:5px;'><code>npm run dev -- --force</code></pre><h3>3. Periksa Konfigurasi vite.config.js</h3><p>Error <code>failed to load config</code> sering disebabkan oleh syntax error atau plugin yang tidak kompatibel di file <code>vite.config.js</code>. Pastikan plugin yang Anda gunakan kompatibel dengan versi Vite saat ini.</p><h3>4. Cek Versi Node.js</h3><p>Vite membutuhkan versi Node.js yang relatif baru (minimal 14.18+ atau 16+). Gunakan <code>node -v</code> untuk mengecek versi Anda dan update jika perlu menggunakan NVM (Node Version Manager).</p><h2>Butuh Bantuan Lebih Lanjut?</h2><p>Jika Anda masih mengalami kesulitan mengatasi error pada project Vite, React, atau framework lainnya, tim <strong>WeabooCoding</strong> siap membantu Anda! Kami melayani jasa pembuatan website, perbaikan error (debugging), hingga bimbingan project IT.</p>"
+  },
+  {
     "id": "apa-itu-ui-ux-dan-mengapa-penting",
     "title": "Apa itu UI/UX dan Mengapa Penting?",
     "description": "Memahami konsep UI dan UX dalam desain aplikasi, serta mengapa UI/UX yang baik dapat meningkatkan konversi.",

@@ -87,7 +87,26 @@ function LegacyScripts() {
         }
       });
     }, { threshold: 0.1 });
+    
     revealEls.forEach(el => observer.observe(el));
+
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length) {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === 1) {
+              if (node.classList.contains('reveal')) {
+                observer.observe(node);
+              }
+              const children = node.querySelectorAll('.reveal');
+              children.forEach(child => observer.observe(child));
+            }
+          });
+        }
+      });
+    });
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
 
     const btnLoadMore = document.getElementById('btn-load-more');
     if (btnLoadMore) {
@@ -120,6 +139,7 @@ function LegacyScripts() {
     return () => {
       window.removeEventListener('scroll', onScroll);
       observer.disconnect();
+      mutationObserver.disconnect();
     };
   }, [location.pathname]);
 
