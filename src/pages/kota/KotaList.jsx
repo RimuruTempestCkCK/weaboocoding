@@ -28,15 +28,17 @@ function KotaList() {
 
         <div className="services-grid">
           {kotaData.map((kota) => (
-            <Link to={`/kota/${kota.id}`} key={kota.id} className="service-card reveal reveal-zoom" style={{ textDecoration: 'none' }}>
-              <div className="s-icon">🎓</div>
-              <div className="s-title" style={{ fontSize: '1.4rem' }}>{kota.name}</div>
-              <p className="s-desc" style={{ marginBottom: '10px' }}>{kota.province}</p>
-              <p className="s-desc">
-                {kota.description.substring(0, 100)}...
-              </p>
-              <div className="s-link" style={{ marginTop: '15px', display: 'inline-block' }}>
-                {kota.students} mahasiswa →
+            <Link to={`/kota/${kota.id}`} key={kota.id} className="service-card reveal reveal-zoom" style={{ textDecoration: 'none', padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ width: '100%', height: '160px', backgroundImage: 'url(https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+              <div style={{ padding: '25px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                <div className="s-title" style={{ fontSize: '1.4rem', marginTop: 0 }}>{kota.name}</div>
+                <p className="s-desc" style={{ marginBottom: '15px', color: 'var(--primary)', fontWeight: 'bold' }}>{kota.province}</p>
+                <p className="s-desc" style={{ flex: 1 }}>
+                  {kota.description.substring(0, 80)}...
+                </p>
+                <div className="s-link" style={{ marginTop: '15px', display: 'inline-block' }}>
+                  {kota.students} Mahasiswa
+                </div>
               </div>
             </Link>
           ))}
