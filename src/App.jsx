@@ -42,6 +42,8 @@ import JasaUiUx from './pages/JasaUiUx';
 import Home from './pages/Home';
 import Weaboocoding from './pages/Weaboocoding';
 import Blog from './pages/Blog';
+import KotaList from './pages/kota/KotaList';
+import KotaDetail from './pages/kota/KotaDetail';
 
 function LegacyScripts() {
   const location = useLocation();
@@ -207,6 +209,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/weaboocoding" element={<Weaboocoding />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/kota" element={<KotaList />} />
+        <Route path="/kota/:id" element={<KotaDetail />} />
       </Routes>
     </Router>
   );
