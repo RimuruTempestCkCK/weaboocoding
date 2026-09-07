@@ -2,7 +2,8 @@ import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import useSEO from '../../hooks/useSEO';
 import { kotaData } from '../../data/kotaData';
-import Breadcrumb from '../../components/Breadcrumb';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import '../../style.css';
 
 function KotaDetail() {
@@ -19,32 +20,12 @@ function KotaDetail() {
     schema: ''
   });
 
-  const breadcrumbItems = [
-    { label: 'Beranda', link: '/' },
-    { label: 'Kota', link: '/kota' },
-    { label: kota.name }
-  ];
-
   return (
     <>
-      <nav id="navbar">
-        <a href="/" className="nav-logo">
-          <div className="nav-logo-text">Weaboo<span>Coding</span></div>
-        </a>
-        <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/#services">Services</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/kota">Kota</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <Header />
 
       <section style={{ paddingTop: '150px', paddingBottom: '100px', paddingLeft: '5%', paddingRight: '5%' }}>
         <div className="section-header centered reveal reveal-zoom" style={{ maxWidth: '800px', margin: 'auto', textAlign: 'center' }}>
-          <div style={{ marginBottom: '20px' }}>
-            <Breadcrumb items={breadcrumbItems} />
-          </div>
           <div className="section-tag" style={{ margin: '0 auto 15px auto', display: 'table' }}>{kota.province}</div>
           <h1 className="section-title">Layanan Joki IT di {kota.name}</h1>
           <p className="section-sub" style={{ color: 'var(--gray-600)', lineHeight: '1.8', marginBottom: '3rem' }}>
@@ -69,12 +50,42 @@ function KotaDetail() {
             </div>
           </div>
           
+          <div style={{ marginTop: '50px', marginBottom: '40px', textAlign: 'left' }}>
+            <h2 className="section-title" style={{ fontSize: '2rem', marginBottom: '10px' }}>Proyek Mahasiswa {kota.name}</h2>
+            <p className="section-sub" style={{ marginBottom: '30px' }}>Berikut adalah beberapa contoh proyek IT dan tugas akhir yang sering kami kerjakan untuk mahasiswa di wilayah {kota.name}.</p>
+            
+            <div className="portfolio-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+              <div className="portfolio-card" style={{ textAlign: 'left' }}>
+                <div className="p-thumb" style={{ padding: '0', overflow: 'hidden', height: '160px' }}>
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Portfolio Data Mining" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+                <div className="p-body" style={{ padding: '20px' }}>
+                  <div className="p-tag" style={{ color: 'var(--blue-500)', fontSize: '0.85rem', fontWeight: 'bold', marginBottom: '5px' }}>Skripsi / Data Mining</div>
+                  <div className="p-name" style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: '10px' }}>Sistem Prediksi Kelulusan</div>
+                  <p className="p-desc" style={{ color: 'var(--gray-600)', fontSize: '0.9rem', lineHeight: '1.5' }}>Pembuatan sistem berbasis web menggunakan Python (Flask) dan algoritma Naive Bayes untuk tugas akhir mahasiswa IT.</p>
+                </div>
+              </div>
+
+              <div className="portfolio-card" style={{ textAlign: 'left' }}>
+                <div className="p-thumb" style={{ padding: '0', overflow: 'hidden', height: '160px' }}>
+                  <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=800&q=80" alt="Portfolio Web App" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+                <div className="p-body" style={{ padding: '20px' }}>
+                  <div className="p-tag" style={{ color: 'var(--blue-500)', fontSize: '0.85rem', fontWeight: 'bold', marginBottom: '5px' }}>Tugas Kuliah / Web App</div>
+                  <div className="p-name" style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: '10px' }}>Aplikasi Manajemen Inventaris</div>
+                  <p className="p-desc" style={{ color: 'var(--gray-600)', fontSize: '0.9rem', lineHeight: '1.5' }}>Sistem informasi inventaris barang sederhana dibangun dengan Laravel dan MySQL dengan waktu pengerjaan 3 hari.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', flexWrap: 'wrap' }}>
             <a href="https://wa.me/6285157558469" className="btn-hero primary">💬 Konsultasi Sekarang</a>
             <Link to="/kota" className="btn-hero secondary">Lihat Kota Lain</Link>
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

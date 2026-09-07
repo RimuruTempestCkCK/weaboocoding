@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useSEO from '../../hooks/useSEO';
 import { kotaData } from '../../data/kotaData';
-import Breadcrumb from '../../components/Breadcrumb';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import '../../style.css';
 
 function KotaList() {
@@ -12,31 +13,12 @@ function KotaList() {
     schema: ''
   });
 
-  const breadcrumbItems = [
-    { label: 'Beranda', link: '/' },
-    { label: 'Kota' }
-  ];
-
   return (
     <>
-      <nav id="navbar">
-        <a href="/" className="nav-logo">
-          <div className="nav-logo-text">Weaboo<span>Coding</span></div>
-        </a>
-        <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/#services">Services</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/kota">Kota</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <Header />
 
       <section id="kota" style={{ paddingTop: '150px' }}>
         <div className="section-header centered">
-          <div style={{ marginBottom: '20px' }}>
-            <Breadcrumb items={breadcrumbItems} />
-          </div>
           <div className="section-tag">Joki Kota</div>
           <h1 className="section-title">Layanan Joki untuk Mahasiswa dari Berbagai Kota</h1>
           <p className="section-sub">
@@ -64,6 +46,7 @@ function KotaList() {
           <p className="section-sub">Menampilkan {kotaData.length} dari {kotaData.length} kota</p>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
