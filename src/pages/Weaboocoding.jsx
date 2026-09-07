@@ -18,7 +18,8 @@ import FloatingWA from '../components/FloatingWA';
 function Weaboocoding() {
   useSEO({
     title: `WeabooCoding – Jasa Pembuatan Website, Aplikasi & Jasa Coding Profesional`,
-    description: ``,
+    description: `Jasa pembuatan website profesional, aplikasi Android/Web, joki tugas IT, dan UI/UX Design dengan harga terjangkau. Tim developer berpengalaman siap membantu proyek digitalmu!`,
+    keywords: `jasa pembuatan website, jasa coding, jasa pembuatan aplikasi, joki tugas IT, joki coding, buat web murah, jasa IT Tangerang, developer website, jasa UI UX, WeabooCoding`,
     schema: `{
     "@context": "https://schema.org",
     "@type": "ProfessionalService",

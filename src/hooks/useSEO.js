@@ -32,6 +32,15 @@ export default function useSEO({ title, description, keywords, schema, image }) 
     // Update URL
     setMetaTag('property', 'og:url', window.location.href);
 
+    // 4.5. Update Canonical URL
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", window.location.href.split('?')[0]);
+
     // 5. Schema.org
     if (schema) {
       let script = document.getElementById('schema-script');
