@@ -107,7 +107,7 @@ function BlogDetail() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
             {kotaData.slice(0, 8).map(k => (
               <Link key={k.id} to={`/kota/${k.id}`} style={{ color: 'var(--primary)', textDecoration: 'none', background: 'var(--gray-50)', padding: '12px 15px', borderRadius: '8px', borderLeft: '4px solid var(--primary)', display: 'block' }}>
-                <strong style={{ color: 'var(--bg-dark)' }}>→ Jasa Web & Coding di {k.name}</strong>
+                <strong style={{ color: 'var(--bg-dark)' }}>Jasa Web & Coding di {k.name}</strong>
               </Link>
             ))}
           </div>

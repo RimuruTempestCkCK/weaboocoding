@@ -92,7 +92,7 @@ function KotaDetail() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
             {blogData.slice(0, 5).map(b => (
               <Link key={b.id} to={`/blog/${b.id}`} style={{ color: 'var(--primary)', textDecoration: 'none', background: 'var(--gray-50)', padding: '12px 15px', borderRadius: '8px', borderLeft: '4px solid var(--primary)', display: 'block' }}>
-                <strong style={{ color: 'var(--bg-dark)' }}>→ {b.title}</strong>
+                <strong style={{ color: 'var(--bg-dark)' }}>{b.title}</strong>
               </Link>
             ))}
           </div>
