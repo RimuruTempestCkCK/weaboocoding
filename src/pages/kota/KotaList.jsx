@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useSEO from '../../hooks/useSEO';
 import { kotaData } from '../../data/kotaData';
+import Breadcrumb from '../../components/Breadcrumb';
 import '../../style.css';
 
 function KotaList() {
@@ -10,6 +11,11 @@ function KotaList() {
     description: 'Layanan joki untuk mahasiswa dari berbagai kota di Indonesia. Temukan jasa joki terdekat di kota Anda seperti Jakarta, Bandung, Surabaya, dan lainnya.',
     schema: ''
   });
+
+  const breadcrumbItems = [
+    { label: 'Beranda', link: '/' },
+    { label: 'Kota' }
+  ];
 
   return (
     <>
@@ -28,6 +34,9 @@ function KotaList() {
 
       <section id="kota" style={{ paddingTop: '150px' }}>
         <div className="section-header centered">
+          <div style={{ marginBottom: '20px' }}>
+            <Breadcrumb items={breadcrumbItems} />
+          </div>
           <div className="section-tag">Joki Kota</div>
           <h1 className="section-title">Layanan Joki untuk Mahasiswa dari Berbagai Kota</h1>
           <p className="section-sub">

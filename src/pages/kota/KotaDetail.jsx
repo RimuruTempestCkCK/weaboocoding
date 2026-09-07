@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import useSEO from '../../hooks/useSEO';
 import { kotaData } from '../../data/kotaData';
+import Breadcrumb from '../../components/Breadcrumb';
 import '../../style.css';
 
 function KotaDetail() {
@@ -17,6 +18,12 @@ function KotaDetail() {
     description: kota.description,
     schema: ''
   });
+
+  const breadcrumbItems = [
+    { label: 'Beranda', link: '/' },
+    { label: 'Kota', link: '/kota' },
+    { label: kota.name }
+  ];
 
   return (
     <>
@@ -35,6 +42,9 @@ function KotaDetail() {
 
       <section style={{ paddingTop: '150px', paddingBottom: '100px', paddingLeft: '5%', paddingRight: '5%' }}>
         <div className="section-header centered reveal reveal-zoom" style={{ maxWidth: '800px', margin: 'auto', textAlign: 'center' }}>
+          <div style={{ marginBottom: '20px' }}>
+            <Breadcrumb items={breadcrumbItems} />
+          </div>
           <div className="section-tag" style={{ margin: '0 auto 15px auto', display: 'table' }}>{kota.province}</div>
           <h1 className="section-title">Layanan Joki IT di {kota.name}</h1>
           <p className="section-sub" style={{ color: 'var(--gray-600)', lineHeight: '1.8', marginBottom: '3rem' }}>
