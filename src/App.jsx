@@ -126,9 +126,13 @@ function LegacyScripts() {
   return null;
 }
 
+import PageTracker from './components/PageTracker';
+import FloatingWA from './components/FloatingWA';
+
 function App() {
   return (
     <Router>
+      <PageTracker />
       <LegacyScripts />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -140,6 +144,7 @@ function App() {
         <Route path="/:slug" element={<JasaDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <FloatingWA />
     </Router>
   );
 }
