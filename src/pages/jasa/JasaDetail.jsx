@@ -18,13 +18,18 @@ function JasaDetail() {
   const jasa = jasaData.find(j => j.id === cleanSlug);
 
   if (!jasa) {
-    // Check if it's a blog post
-    if (blogData.find(b => b.id === cleanSlug)) {
-      return <Navigate to={`/blog/${cleanSlug}`} replace />;
+    const slugNoHyphen = cleanSlug.replace(/-/g, '');
+    
+    // Check if it's a blog post (fuzzy match hyphens)
+    const foundBlog = blogData.find(b => b.id.replace(/-/g, '') === slugNoHyphen);
+    if (foundBlog) {
+      return <Navigate to={`/blog/${foundBlog.id}`} replace />;
     }
-    // Check if it's a kota page
-    if (kotaData.find(k => k.id === cleanSlug)) {
-      return <Navigate to={`/kota/${cleanSlug}`} replace />;
+    
+    // Check if it's a kota page (fuzzy match hyphens)
+    const foundKota = kotaData.find(k => k.id.replace(/-/g, '') === slugNoHyphen);
+    if (foundKota) {
+      return <Navigate to={`/kota/${foundKota.id}`} replace />;
     }
     // Check for hardcoded old root pages
     if (cleanSlug === 'blog') return <Navigate to="/blog" replace />;
