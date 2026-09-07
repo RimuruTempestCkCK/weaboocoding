@@ -19,9 +19,6 @@ function Blog() {
     <>
       <Header />
 
-
-  </nav>
-
   <section className="blog-header" style={{ paddingTop: '150px', paddingBottom: '50px', background: 'var(--gray-50)', textAlign: 'center' }}>
     <div className="section-tag">Blog & Artikel</div>
     <h1 className="hero-title">Tips, Tutorial & Insight</h1>
