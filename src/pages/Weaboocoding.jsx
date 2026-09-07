@@ -298,43 +298,35 @@ function Weaboocoding() {
 
   <div className="why-grid">
     <div className="why-card reveal reveal-zoom">
-      <div className="why-icon">📱</div>
-      <div className="why-title">Responsive Design</div>
+      <div className="why-title">01. Responsive Design</div>
       <p className="why-desc">Semua project kami dioptimalkan untuk tampilan terbaik di semua perangkat.</p>
     </div>
     <div className="why-card reveal reveal-zoom">
-      <div className="why-icon">⚡</div>
-      <div className="why-title">Fast Delivery</div>
+      <div className="why-title">02. Fast Delivery</div>
       <p className="why-desc">Kami menghargai waktu klien. Pengerjaan cepat tanpa mengorbankan kualitas.</p>
     </div>
     <div className="why-card reveal reveal-zoom">
-      <div className="why-icon">💰</div>
-      <div className="why-title">Harga Terjangkau</div>
+      <div className="why-title">03. Harga Terjangkau</div>
       <p className="why-desc">Kualitas premium dengan harga yang ramah di kantong mahasiswa maupun UMKM.</p>
     </div>
     <div className="why-card reveal reveal-zoom">
-      <div className="why-icon">🆓</div>
-      <div className="why-title">Free Consultation</div>
+      <div className="why-title">04. Free Consultation</div>
       <p className="why-desc">Konsultasi gratis sebelum project dimulai untuk memastikan kebutuhan terpenuhi.</p>
     </div>
     <div className="why-card reveal reveal-zoom">
-      <div className="why-icon">🛡️</div>
-      <div className="why-title">Garansi Revisi</div>
+      <div className="why-title">05. Garansi Revisi</div>
       <p className="why-desc">Kami memberikan garansi revisi sesuai kesepakatan hingga kamu puas.</p>
     </div>
     <div className="why-card reveal reveal-zoom">
-      <div className="why-icon">🤝</div>
-      <div className="why-title">Support After-Sales</div>
+      <div className="why-title">06. Support After-Sales</div>
       <p className="why-desc">Dukungan purna jual tersedia untuk memastikan projectmu berjalan lancar.</p>
     </div>
     <div className="why-card reveal reveal-zoom">
-      <div className="why-icon">🔐</div>
-      <div className="why-title">Keamanan Data</div>
+      <div className="why-title">07. Keamanan Data</div>
       <p className="why-desc">Data dan kebutuhan proyekmu aman bersama kami dengan NDA jika diperlukan.</p>
     </div>
     <div className="why-card reveal reveal-zoom">
-      <div className="why-icon">🌟</div>
-      <div className="why-title">Tim Berpengalaman</div>
+      <div className="why-title">08. Tim Berpengalaman</div>
       <p className="why-desc">Developer berpengalaman 3+ tahun siap menghandle berbagai jenis project.</p>
     </div>
   </div>
