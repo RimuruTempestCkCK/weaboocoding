@@ -1,3 +1,4 @@
+import { track } from '@vercel/analytics';
 import React from 'react';
 
 export default function ContactSection() {
@@ -16,7 +17,7 @@ export default function ContactSection() {
             <h3>Kontak &amp; Sosial Media</h3>
             <p>Hubungi kami melalui channel yang kamu suka. Tim kami siap merespons dalam 1×24 jam.</p>
             <div className="contact-links">
-              <a href="https://wa.me/6285157558469" className="contact-link" target="_blank">
+              <a href="https://wa.me/6285157558469" onClick={() => track('Klik_WA')} className="contact-link" target="_blank">
                 <span className="icon">💬</span> WhatsApp: +6285157558469
               </a>
               <a href="https://instagram.com/weaboocoding" className="contact-link" target="_blank">
@@ -33,7 +34,8 @@ export default function ContactSection() {
               const pesan = document.getElementById('pesan').value;
               
               const text = `Halo WeabooCoding! 👋%0A%0APerkenalkan saya *${nama}*.%0ASaya tertarik dengan layanan *${layanan}*.%0A%0A*Deskripsi Project:*%0A${pesan}%0A%0AMohon info lebih lanjut ya, terima kasih!`;
-              window.open(`https://wa.me/6285157558469?text=${text}`, '_blank');
+              track('Klik_WA');
+        window.open(`https://wa.me/6285157558469?text=${text}`, '_blank');
             }}>
               <div className="form-group">
                 <label htmlFor="nama">Nama Lengkap</label>

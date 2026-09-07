@@ -1,3 +1,4 @@
+import { track } from '@vercel/analytics';
 import React from 'react';
 
 function Header() {
@@ -16,7 +17,7 @@ function Header() {
         <li><a href="/blog">Blog</a></li>
         <li><a href="/kota">Kota</a></li>
         <li><a href="/#contact">Contact</a></li>
-        <li className="nav-cta"><a href="https://wa.me/6285157558469" className="btn-cta">💬 Konsultasi Gratis</a></li>
+        <li className="nav-cta"><a href="https://wa.me/6285157558469" onClick={() => track('Klik_WA')} className="btn-cta">💬 Konsultasi Gratis</a></li>
       </ul>
 
       <button className="hamburger" id="hamburger" aria-label="Menu">

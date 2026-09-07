@@ -1,3 +1,4 @@
+import { track } from '@vercel/analytics';
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Home from './pages/Home';
@@ -132,6 +133,7 @@ function LegacyScripts() {
         const layanan = document.getElementById('layanan')?.value || '';
         const pesan = document.getElementById('pesan')?.value || '';
         const waMsg = encodeURIComponent(`Halo WeabooCoding!\n\nNama: ${nama}\nLayanan: ${layanan}\nPesan: ${pesan}`);
+        track('Klik_WA');
         window.open(`https://wa.me/6285157558469?text=${waMsg}`, '_blank');
       });
     }

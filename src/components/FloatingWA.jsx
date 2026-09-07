@@ -1,10 +1,11 @@
+import { track } from '@vercel/analytics';
 import React from 'react';
 import '../style.css';
 
 export default function FloatingWA() {
   return (
     <a 
-      href="https://wa.me/6285157558469" 
+      href="https://wa.me/6285157558469" onClick={() => track('Klik_WA')} 
       target="_blank" 
       rel="noopener noreferrer"
       style={{

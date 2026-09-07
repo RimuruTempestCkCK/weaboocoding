@@ -1,3 +1,4 @@
+import { track } from '@vercel/analytics';
 import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import useSEO from '../../hooks/useSEO';
@@ -97,7 +98,7 @@ function BlogDetail() {
               <div style={{ marginTop: '50px', padding: '30px', background: 'var(--gray-50)', borderRadius: '15px', borderLeft: '5px solid var(--primary)' }}>
                 <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>Konsultasikan Kebutuhan IT Anda</h3>
                 <p style={{ marginBottom: '20px' }}>Apakah Anda masih ragu atau butuh bantuan eksekusi teknis? WeabooCoding melayani jasa pembuatan website, aplikasi Android, UI/UX, hingga bantuan penyelesaian tugas/skripsi IT.</p>
-                <a href="https://wa.me/6285157558469" target="_blank" rel="noreferrer" className="btn-hero primary" style={{ display: 'inline-block', textDecoration: 'none' }}>Hubungi Kami di WhatsApp </a>
+                <a href="https://wa.me/6285157558469" onClick={() => track('Klik_WA')} target="_blank" rel="noreferrer" className="btn-hero primary" style={{ display: 'inline-block', textDecoration: 'none' }}>Hubungi Kami di WhatsApp </a>
               </div>
             </>
           )}

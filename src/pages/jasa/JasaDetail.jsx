@@ -1,3 +1,4 @@
+import { track } from '@vercel/analytics';
 import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import useSEO from '../../hooks/useSEO';
@@ -47,16 +48,49 @@ function JasaDetail() {
   useSEO({
     title: jasa.titleSEO,
     description: jasa.descSEO,
-    schema: `{
+    schema: JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "${jasa.h1}",
-      "provider": {
-        "@type": "Organization",
-        "name": "WeabooCoding"
-      },
-      "description": "${jasa.descSEO}"
-    }`
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": jasa.h1,
+          "provider": {
+            "@type": "Organization",
+            "name": "WeabooCoding"
+          },
+          "description": jasa.descSEO
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apakah WeabooCoding melayani klien di luar Tangerang Selatan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, kami melayani klien dari seluruh Indonesia secara remote dengan komunikasi yang lancar via WhatsApp dan Google Meet."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Berapa lama proses pengerjaan project?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Waktu pengerjaan bervariasi tergantung kompleksitas. Untuk website company profile biasanya 3-7 hari, sedangkan aplikasi custom bisa 2-4 minggu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah ada garansi atau layanan maintenance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu saja! Kami memberikan garansi bebas bug dan layanan maintenance gratis selama periode tertentu setelah project selesai."
+              }
+            }
+          ]
+        }
+      ]
+    })
   });
 
   return (
@@ -71,7 +105,7 @@ function JasaDetail() {
         <div style={{ marginTop: '40px', padding: '20px', background: 'var(--gray-50)', borderRadius: '8px' }}>
           <h3 style={{ marginBottom: '10px' }}>Butuh Bantuan Lebih Lanjut?</h3>
           <p style={{ marginBottom: '15px' }}>Jika Anda sedang mencari jasa pembuatan aplikasi, website, atau jasa coding profesional, WeabooCoding siap membantu.</p>
-          <a href="https://wa.me/6285157558469" target="_blank" rel="noreferrer" className="btn-hero primary" style={{ display: 'inline-block' }}>💬 Konsultasi Sekarang</a>
+          <a href="https://wa.me/6285157558469" onClick={() => track('Klik_WA')} target="_blank" rel="noreferrer" className="btn-hero primary" style={{ display: 'inline-block' }}>💬 Konsultasi Sekarang</a>
         </div>
       </section>
 

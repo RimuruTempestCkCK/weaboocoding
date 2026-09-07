@@ -22,7 +22,7 @@ export default function useSEO({ title, description, keywords, schema, image }) 
     }
 
     // 4. Update Open Graph Image
-    const defaultImage = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80"; // Gambar default jika tidak ada
+    const defaultImage = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80&fm=webp"; // Gambar default jika tidak ada
     const targetImage = image || defaultImage;
     setMetaTag('property', 'og:image', targetImage);
     setMetaTag('name', 'twitter:image', targetImage);

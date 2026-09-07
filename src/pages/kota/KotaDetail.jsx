@@ -1,3 +1,4 @@
+import { track } from '@vercel/analytics';
 import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import useSEO from '../../hooks/useSEO';
@@ -79,7 +80,7 @@ function KotaDetail() {
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', flexWrap: 'wrap' }}>
-            <a href="https://wa.me/6285157558469" className="btn-hero primary">Konsultasi Sekarang</a>
+            <a href="https://wa.me/6285157558469" onClick={() => track('Klik_WA')} className="btn-hero primary">Konsultasi Sekarang</a>
             <Link to="/kota" className="btn-hero secondary">Lihat Kota Lain</Link>
           </div>
         </div>
