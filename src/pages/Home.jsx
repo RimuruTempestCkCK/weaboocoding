@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import HowItWorks from '../components/HowItWorks';
 import ServicesSection from '../components/ServicesSection';
 import Pricing from '../components/Pricing';
 import PortfolioSection from '../components/PortfolioSection';
@@ -72,6 +73,7 @@ function Home() {
       <Header />
       <Hero />
       <About />
+      <HowItWorks />
       <ServicesSection />
       <Pricing />
       <PortfolioSection />

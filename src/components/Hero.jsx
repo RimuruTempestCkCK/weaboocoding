@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Hero */}
       
   <section className="hero" id="home">
-    <div className="hero-content">
+    <div className="hero-content" data-aos="fade-right">
       <div className="hero-badge"><span className="dot"></span> #1 Jasa Coding Terpercaya</div>
       <h1 className="hero-title">WeabooCoding – Jasa Coding &amp;<br /><span className="accent">Pembuatan Website Profesional</span></h1>
       <p className="hero-sub">WeabooCoding menyediakan jasa coding dan pembuatan website untuk pelanggan di Tangerang Selatan dan sekitarnya. Solusi tepat untuk mahasiswa, UMKM, dan perusahaan.</p>
@@ -30,7 +30,7 @@ export default function Hero() {
       </div>
     </div>
 
-    <div className="hero-visual">
+    <div className="hero-visual" data-aos="fade-left">
       <div className="hero-visual-wrap">
         <div className="floating-card card-1"><span className="icon">✅</span> Project Delivered!</div>
         <div className="code-window">

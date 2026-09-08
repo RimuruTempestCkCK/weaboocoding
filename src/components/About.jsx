@@ -5,7 +5,7 @@ export default function About() {
     <>
       <section className="about" id="about">
         <div className="about-grid">
-          <div className="about-visual reveal reveal-left">
+          <div className="about-visual" data-aos="fade-right">
             <div className="about-big-text">We Build<br />Your Vision</div>
             <p className="about-big-sub">Dari ide sederhana hingga sistem kompleks, kami siap mengeksekusi dengan presisi dan dedikasi penuh.</p>
             <div style={{ marginTop: '2rem', display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
@@ -20,7 +20,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="reveal reveal-right">
+          <div data-aos="fade-left">
             <div className="section-tag">Tentang Kami</div>
             <h2 className="section-title">Coding Partner yang Kamu Butuhkan</h2>
             <p style={{ color: 'var(--gray-600)', lineHeight: '1.8', marginBottom: '2rem' }}>

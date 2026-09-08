@@ -1,5 +1,7 @@
 import { track } from '@vercel/analytics';
 import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Weaboocoding from './pages/Weaboocoding';
@@ -152,6 +154,14 @@ import PageTracker from './components/PageTracker';
 import FloatingWA from './components/FloatingWA';
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  }, []);
+
   return (
     <Router>
       <PageTracker />

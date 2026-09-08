@@ -1611,3 +1611,39 @@
     transform: translateY(-5px);
   }
 }
+
+/* ── HOW IT WORKS ── */
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.how-it-works-card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: transform 0.3s;
+}
+.how-it-works-card:hover {
+  transform: translateY(-5px);
+}
+.how-it-works-card .step-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.how-it-works-card .step-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+}
+.how-it-works-card .step-number {
+  color: var(--blue-500);
+}
+.how-it-works-card .step-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
