@@ -11,11 +11,6 @@ function Footer() {
               Weaboo<span style={{ color: 'var(--blue-300)' }}>Coding</span>
             </div>
             <p>Jasa coding profesional untuk website, aplikasi, tugas kuliah, dan solve code. Melayani dengan cepat, terpercaya, dan terjangkau.</p>
-            <div className="footer-socials">
-              <a href="#" className="social-btn">📸</a>
-              <a href="#" className="social-btn">💼</a>
-              <a href="#" className="social-btn">🐙</a>
-            </div>
           </div>
           <div className="footer-col">
             <h4>Navigasi</h4>
