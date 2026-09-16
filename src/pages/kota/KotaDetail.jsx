@@ -1,7 +1,7 @@
 import { track } from '@vercel/analytics';
 import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import useSEO from '../../hooks/useSEO';
+import SEO from '../../components/SEO';
 import { kotaData } from '../../data/kotaData';
 import { blogData } from '../../data/blogData';
 import Header from '../../components/Header';
@@ -17,14 +17,16 @@ function KotaDetail() {
     return <NotFound />;
   }
 
-  useSEO({
+  
+
+  const seoProps = {
     title: `Jasa Joki IT Mahasiswa ${kota.name} | WeabooCoding`,
     description: kota.description,
     schema: ''
-  });
-
+  };
   return (
     <>
+      <SEO {...seoProps} />
       <Header />
 
       <section style={{ paddingTop: '150px', paddingBottom: '100px', paddingLeft: '5%', paddingRight: '5%' }}>

@@ -2,7 +2,7 @@ import { track } from '@vercel/analytics';
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Weaboocoding from './pages/Weaboocoding';
 import Blog from './pages/Blog';
@@ -163,7 +163,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <>
       <PageTracker />
       <LegacyScripts />
       <Routes>
@@ -177,7 +177,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <FloatingWA />
-    </Router>
+    </>
   );
 }
 

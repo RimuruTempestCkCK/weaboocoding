@@ -1,7 +1,7 @@
 import { track } from '@vercel/analytics';
 import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import useSEO from '../../hooks/useSEO';
+import SEO from '../../components/SEO';
 import { jasaData } from '../../data/jasaData';
 import { blogData } from '../../data/blogData';
 import { kotaData } from '../../data/kotaData';
@@ -45,7 +45,9 @@ function JasaDetail() {
     return <Navigate to={`/${cleanSlug}`} replace />;
   }
 
-  useSEO({
+  
+
+  const seoProps = {
     title: jasa.titleSEO,
     description: jasa.descSEO,
     schema: JSON.stringify({
@@ -91,10 +93,10 @@ function JasaDetail() {
         }
       ]
     })
-  });
-
+  };
   return (
     <>
+      <SEO {...seoProps} />
       <Header />
 
       <section style={{ padding: '150px 5% 100px', maxWidth: '800px', margin: 'auto', lineHeight: '1.8', color: 'var(--text)' }}>

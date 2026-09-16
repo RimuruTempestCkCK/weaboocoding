@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style.css';
-import useSEO from '../hooks/useSEO';
+import SEO from '../components/SEO';
 
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -16,7 +16,9 @@ import Footer from '../components/Footer';
 import FloatingWA from '../components/FloatingWA';
 
 function Weaboocoding() {
-  useSEO({
+  
+
+  const seoProps = {
     title: `WeabooCoding – Jasa Pembuatan Website, Aplikasi & Jasa Coding Profesional`,
     description: `Jasa pembuatan website profesional, aplikasi Android/Web, joki tugas IT, dan UI/UX Design dengan harga terjangkau. Tim developer berpengalaman siap membantu proyek digitalmu!`,
     keywords: `jasa pembuatan website, jasa coding, jasa pembuatan aplikasi, joki tugas IT, joki coding, buat web murah, jasa IT Tangerang, developer website, jasa UI UX, WeabooCoding`,
@@ -52,10 +54,10 @@ function Weaboocoding() {
       }
     }
   }`
-  });
-
+  };
   return (
     <>
+      <SEO {...seoProps} />
       <Header />
       <Hero />
       <About />

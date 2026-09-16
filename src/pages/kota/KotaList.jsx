@@ -1,20 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useSEO from '../../hooks/useSEO';
+import SEO from '../../components/SEO';
 import { kotaData } from '../../data/kotaData';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import '../../style.css';
 
 function KotaList() {
-  useSEO({
+  
+
+  const seoProps = {
     title: 'Joki Kota | Layanan Joki Tugas per Kota di Indonesia',
     description: 'Layanan joki untuk mahasiswa dari berbagai kota di Indonesia. Temukan jasa joki terdekat di kota Anda seperti Jakarta, Bandung, Surabaya, dan lainnya.',
     schema: ''
-  });
-
+  };
   return (
     <>
+      <SEO {...seoProps} />
       <Header />
 
       <section id="kota" style={{ paddingTop: '150px' }}>

@@ -1,22 +1,24 @@
 import React from 'react';
 import '../style.css';
 import { Link } from 'react-router-dom';
-import useSEO from '../hooks/useSEO';
+import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { blogData } from '../data/blogData';
 
 function Blog() {
-  useSEO({
-    title: `WeabooCoding – Jasa Pembuatan Website, Aplikasi & Jasa Coding Profesional`,
-    description: ``,
-    schema: `{}`
-  });
+  
 
   const articles = blogData;
 
+  const seoProps = {
+    title: `WeabooCoding – Jasa Pembuatan Website, Aplikasi & Jasa Coding Profesional`,
+    description: ``,
+    schema: `{}`
+  };
   return (
     <>
+      <SEO {...seoProps} />
       <Header />
 
   <section className="blog-header" style={{ paddingTop: '150px', paddingBottom: '50px', background: 'var(--gray-50)', textAlign: 'center' }}>

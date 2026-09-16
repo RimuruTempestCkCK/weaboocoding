@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../style.css';
@@ -7,6 +8,9 @@ import '../style.css';
 function NotFound() {
   return (
     <>
+      <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <Header />
       <section style={{ padding: '200px 5% 150px', textAlign: 'center', minHeight: '60vh' }}>
         <h1 style={{ fontSize: '5rem', color: 'var(--blue-500)', marginBottom: '20px' }}>404</h1>

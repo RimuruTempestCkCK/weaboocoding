@@ -1,7 +1,7 @@
 import { track } from '@vercel/analytics';
 import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import useSEO from '../../hooks/useSEO';
+import SEO from '../../components/SEO';
 import { blogData } from '../../data/blogData';
 import { kotaData } from '../../data/kotaData';
 import Header from '../../components/Header';
@@ -17,7 +17,9 @@ function BlogDetail() {
     return <NotFound />;
   }
 
-  useSEO({
+  
+
+  const seoProps = {
     title: blog.title,
     description: blog.description,
     keywords: blog.keywords,
@@ -41,10 +43,10 @@ function BlogDetail() {
       "datePublished": "2026-09-05",
       "description": "${blog.description}"
     }`
-  });
-
+  };
   return (
     <>
+      <SEO {...seoProps} />
       <Header />
       
       <article style={{ padding: '150px 5% 50px', maxWidth: '900px', margin: 'auto', lineHeight: '1.8', color: 'var(--text)' }}>
