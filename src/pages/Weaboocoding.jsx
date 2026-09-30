@@ -26,9 +26,9 @@ function Weaboocoding() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "WeabooCoding",
-    "image": "https://weaboocoding.vercel.app/images/logo.png",
-    "@id": "https://weaboocoding.vercel.app/",
-    "url": "https://weaboocoding.vercel.app/",
+    "image": "https://weaboocoding.com/images/logo.png",
+    "@id": "https://weaboocoding.com/",
+    "url": "https://weaboocoding.com/",
     "telephone": "+6285157558469",
     "priceRange": "Rp 500.000 - Rp 10.000.000",
     "description": "Layanan jasa pembuatan website profesional, pengembangan aplikasi Android dan Web, jasa joki tugas coding, serta UI/UX Design dengan kualitas tinggi.",
@@ -45,7 +45,7 @@ function Weaboocoding() {
     },
     "offers": {
       "@type": "Offer",
-      "url": "https://weaboocoding.vercel.app/#services",
+      "url": "https://weaboocoding.com/#services",
       "priceCurrency": "IDR",
       "price": "500000",
       "itemOffered": {

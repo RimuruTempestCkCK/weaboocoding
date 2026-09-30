@@ -5,7 +5,7 @@ export default function SEO({ title, description, keywords, schema, image }) {
   const defaultImage = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80&fm=webp";
   const targetImage = image || defaultImage;
   
-  const baseUrl = "https://weaboocoding.vercel.app";
+  const baseUrl = "https://weaboocoding.com";
   let path = "";
   if (typeof window !== 'undefined') {
     path = window.location.pathname;

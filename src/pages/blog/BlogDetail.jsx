@@ -37,7 +37,7 @@ function BlogDetail() {
         "name": "WeabooCoding",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://weaboocoding.vercel.app/images/logo.png"
+          "url": "https://weaboocoding.com/images/logo.png"
         }
       },
       "datePublished": "2026-09-05",

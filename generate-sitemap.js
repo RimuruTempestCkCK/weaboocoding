@@ -3,7 +3,7 @@ import { blogData } from './src/data/blogData.js';
 import { jasaData } from './src/data/jasaData.js';
 import { kotaData } from './src/data/kotaData.js';
 
-const BASE_URL = 'https://weaboocoding.vercel.app';
+const BASE_URL = 'https://weaboocoding.com';
 
 function generateSitemap() {
   const sitemapHeader = `<?xml version="1.0" encoding="UTF-8"?>

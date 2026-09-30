@@ -55,11 +55,11 @@ const path = require('path');
     let html = await page.content();
     
     // Fix canonical URLs and JSON-LD URLs to production
-    html = html.replace(/http:\/\/localhost:4173/g, 'https://weaboocoding.vercel.app');
-    html = html.replace(/http:\/\/127\.0\.0\.1:4173/g, 'https://weaboocoding.vercel.app');
-    html = html.replace(/http:\/\/localhost:4175/g, 'https://weaboocoding.vercel.app');
-    html = html.replace(/http:\/\/127\.0\.0\.1:4175/g, 'https://weaboocoding.vercel.app');
-    html = html.replace(/http:\/\/localhost:3000/g, 'https://weaboocoding.vercel.app');
+    html = html.replace(/http:\/\/localhost:4173/g, 'https://weaboocoding.com');
+    html = html.replace(/http:\/\/127\.0\.0\.1:4173/g, 'https://weaboocoding.com');
+    html = html.replace(/http:\/\/localhost:4175/g, 'https://weaboocoding.com');
+    html = html.replace(/http:\/\/127\.0\.0\.1:4175/g, 'https://weaboocoding.com');
+    html = html.replace(/http:\/\/localhost:3000/g, 'https://weaboocoding.com');
 
     let filePath = path.join(distPath, route, 'index.html');
     if (route === '/404') {
