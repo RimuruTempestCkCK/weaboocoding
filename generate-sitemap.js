@@ -14,22 +14,22 @@ function generateSitemap() {
 
   // Static routes
   urls.push({ loc: '/', priority: '1.0' });
-  urls.push({ loc: '/blog', priority: '0.8' });
-  urls.push({ loc: '/kota', priority: '0.8' });
+  urls.push({ loc: '/blog/', priority: '0.8' });
+  urls.push({ loc: '/kota/', priority: '0.8' });
 
   // Jasa routes
   jasaData.forEach(jasa => {
-    urls.push({ loc: `/${jasa.id}`, priority: '0.9' });
+    urls.push({ loc: `/${jasa.id}/`, priority: '0.9' });
   });
 
   // Kota routes
   kotaData.forEach(kota => {
-    urls.push({ loc: `/kota/${kota.id}`, priority: '0.8' });
+    urls.push({ loc: `/kota/${kota.id}/`, priority: '0.8' });
   });
 
   // Blog routes
   blogData.forEach(blog => {
-    urls.push({ loc: `/blog/${blog.id}`, priority: '0.7' });
+    urls.push({ loc: `/blog/${blog.id}/`, priority: '0.7' });
   });
 
   let xmlBody = '';

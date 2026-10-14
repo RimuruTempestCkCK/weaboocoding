@@ -30,7 +30,7 @@ function KotaList() {
 
         <div className="services-grid">
           {kotaData.map((kota) => (
-            <Link to={`/kota/${kota.id}`} key={kota.id} className="service-card reveal reveal-zoom" style={{ textDecoration: 'none', padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+            <Link to={`/kota/${kota.id}/`} key={kota.id} className="service-card reveal reveal-zoom" style={{ textDecoration: 'none', padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
               <div style={{ width: '100%', height: '160px', backgroundImage: `url(https://picsum.photos/seed/${kota.id}/600/300)`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
               <div style={{ padding: '25px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <div className="s-title" style={{ fontSize: '1.4rem', marginTop: 0 }}>{kota.name}</div>

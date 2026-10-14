@@ -14,8 +14,8 @@ function Header() {
         <li><a href="/#services">Services</a></li>
         <li><a href="/#pricing">Pricing</a></li>
         <li><a href="/#portfolio">Portfolio</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/kota">Kota</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/kota/">Kota</a></li>
         <li><a href="/#contact">Contact</a></li>
         <li className="nav-cta"><a href="https://wa.me/6285157558469" onClick={() => track('Klik_WA')} className="btn-cta">💬 Konsultasi Gratis</a></li>
       </ul>

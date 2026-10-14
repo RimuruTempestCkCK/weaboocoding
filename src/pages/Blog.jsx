@@ -30,7 +30,7 @@ function Blog() {
   <section className="blog-list" style={{ padding: '60px 6%' }}>
     <div className="pricing-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', maxWidth: '1100px', margin: '0 auto' }}>
       {articles.map((item, i) => (
-        <Link to={`/blog/${item.id}`} key={i} style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link to={`/blog/${item.id}/`} key={i} style={{ textDecoration: 'none', color: 'inherit' }}>
           <div className="pricing-card reveal reveal-zoom" style={{ padding: '0', overflow: 'hidden' }}>
             <img loading="lazy" src={item.image} alt={item.title} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
             <div style={{ padding: '25px' }}>

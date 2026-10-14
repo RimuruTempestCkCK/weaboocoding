@@ -6,11 +6,14 @@ export default function SEO({ title, description, keywords, schema, image }) {
   const targetImage = image || defaultImage;
   
   const baseUrl = "https://weaboocoding.com";
-  let path = "";
+  let path = "/";
   if (typeof window !== 'undefined') {
-    path = window.location.pathname;
+    path = window.location.pathname || "/";
   }
-  const url = `${baseUrl}${path}`;
+  // Ensure trailing slash for all paths while preventing double slash on root
+  const cleanPath = path.replace(/\/+$/, '');
+  const normalizedPath = cleanPath === '' ? '/' : `${cleanPath}/`;
+  const url = `${baseUrl}${normalizedPath}`;
 
   return (
     <Helmet>

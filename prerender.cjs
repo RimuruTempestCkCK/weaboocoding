@@ -11,15 +11,15 @@ const path = require('path');
 
   const routes = [
     '/',
-    '/blog',
-    '/kota',
-    '/weaboocoding',
+    '/blog/',
+    '/kota/',
+    '/weaboocoding/',
     '/404'
   ];
 
-  jasaData.forEach(j => routes.push(`/${j.id}`));
-  kotaData.forEach(k => routes.push(`/kota/${k.id}`));
-  blogData.forEach(b => routes.push(`/blog/${b.id}`));
+  jasaData.forEach(j => routes.push(`/${j.id}/`));
+  kotaData.forEach(k => routes.push(`/kota/${k.id}/`));
+  blogData.forEach(b => routes.push(`/blog/${b.id}/`));
 
   console.log('Creating pristine dist backup for serving...');
   const distPath = path.resolve('dist');
@@ -61,11 +61,15 @@ const path = require('path');
     html = html.replace(/http:\/\/127\.0\.0\.1:4175/g, 'https://weaboocoding.com');
     html = html.replace(/http:\/\/localhost:3000/g, 'https://weaboocoding.com');
 
-    let filePath = path.join(distPath, route, 'index.html');
+    let filePath;
     if (route === '/404') {
       filePath = path.join(distPath, '404.html');
     } else if (route === '/') {
       filePath = path.join(distPath, 'index.html');
+    } else {
+      // For any route like '/blog/', strip leading/trailing slash to construct dist/blog/index.html cleanly
+      const subPath = route.replace(/^\/+|\/+$/g, '');
+      filePath = path.join(distPath, subPath, 'index.html');
     }
     const dirPath = path.dirname(filePath);
     

@@ -83,7 +83,7 @@ function KotaDetail() {
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', flexWrap: 'wrap' }}>
             <a href="https://wa.me/6285157558469" onClick={() => track('Klik_WA')} className="btn-hero primary">Konsultasi Sekarang</a>
-            <Link to="/kota" className="btn-hero secondary">Lihat Kota Lain</Link>
+            <Link to="/kota/" className="btn-hero secondary">Lihat Kota Lain</Link>
           </div>
         </div>
       
@@ -91,7 +91,7 @@ function KotaDetail() {
           <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>Artikel & Edukasi Terbaru</h3>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
             {blogData.slice(0, 5).map(b => (
-              <Link key={b.id} to={`/blog/${b.id}`} style={{ color: 'var(--primary)', textDecoration: 'none', background: 'var(--gray-50)', padding: '12px 15px', borderRadius: '8px', borderLeft: '4px solid var(--primary)', display: 'block' }}>
+              <Link key={b.id} to={`/blog/${b.id}/`} style={{ color: 'var(--primary)', textDecoration: 'none', background: 'var(--gray-50)', padding: '12px 15px', borderRadius: '8px', borderLeft: '4px solid var(--primary)', display: 'block' }}>
                 <strong style={{ color: 'var(--bg-dark)' }}>{b.title}</strong>
               </Link>
             ))}
