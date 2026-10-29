@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://weaboocoding.com/sitemap.xml

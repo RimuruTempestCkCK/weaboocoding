@@ -1,10 +1,10 @@
 import React from 'react';
 import '../style.css';
 import SEO from '../components/SEO';
-
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import HowItWorks from '../components/HowItWorks';
 import ServicesSection from '../components/ServicesSection';
 import Pricing from '../components/Pricing';
 import PortfolioSection from '../components/PortfolioSection';
@@ -13,64 +13,64 @@ import FAQSection from '../components/FAQSection';
 import TestimonialSection from '../components/TestimonialSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
-import FloatingWA from '../components/FloatingWA';
 
 function Weaboocoding() {
-  
-
   const seoProps = {
     title: `WeabooCoding – Jasa Pembuatan Website, Aplikasi & Jasa Coding Profesional`,
     description: `Jasa pembuatan website profesional, aplikasi Android/Web, joki tugas IT, dan UI/UX Design dengan harga terjangkau. Tim developer berpengalaman siap membantu proyek digitalmu!`,
     keywords: `jasa pembuatan website, jasa coding, jasa pembuatan aplikasi, joki tugas IT, joki coding, buat web murah, jasa IT Tangerang, developer website, jasa UI UX, WeabooCoding`,
     schema: `{
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "WeabooCoding",
-    "image": "https://weaboocoding.com/images/logo.png",
-    "@id": "https://weaboocoding.com/",
-    "url": "https://weaboocoding.com/",
-    "telephone": "+6285157558469",
-    "priceRange": "Rp 500.000 - Rp 10.000.000",
-    "description": "Layanan jasa pembuatan website profesional, pengembangan aplikasi Android dan Web, jasa joki tugas coding, serta UI/UX Design dengan kualitas tinggi.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "ID"
-    },
-    "sameAs": [
-      "https://instagram.com/weaboocoding"
-    ],
-    "areaServed": {
-      "@type": "Country",
-      "name": "Indonesia"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://weaboocoding.com/#services",
-      "priceCurrency": "IDR",
-      "price": "500000",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Jasa Pembuatan Website & Coding"
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "WeabooCoding",
+      "image": "https://weaboocoding.com/images/logo.png",
+      "@id": "https://weaboocoding.com/",
+      "url": "https://weaboocoding.com/",
+      "telephone": "+6285157558469",
+      "priceRange": "Rp 200.000 - Rp 10.000.000",
+      "description": "Layanan jasa pembuatan website profesional, pengembangan aplikasi Android dan Web, jasa joki tugas coding, serta UI/UX Design dengan kualitas tinggi.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tangerang Selatan",
+        "addressCountry": "ID"
+      },
+      "sameAs": [
+        "https://instagram.com/weaboocoding"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Indonesia"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://weaboocoding.com/#services",
+        "priceCurrency": "IDR",
+        "price": "200000",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Jasa Pembuatan Website & Coding"
+        }
       }
-    }
-  }`
+    }`,
   };
+
   return (
     <>
       <SEO {...seoProps} />
       <Header />
-      <Hero />
-      <About />
-      <ServicesSection />
-      <Pricing />
-      <PortfolioSection />
-      <WhyUs />
-      <FAQSection />
-      <TestimonialSection />
-      <ContactSection />
+      <main>
+        <Hero />
+        <About />
+        <HowItWorks />
+        <ServicesSection />
+        <Pricing />
+        <PortfolioSection />
+        <WhyUs />
+        <TestimonialSection />
+        <FAQSection />
+        <ContactSection />
+      </main>
       <Footer />
-      <FloatingWA />
-      <script src="js/script.js" defer></script>
     </>
   );
 }

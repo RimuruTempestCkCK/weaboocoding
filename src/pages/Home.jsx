@@ -1,7 +1,6 @@
 import React from 'react';
 import '../style.css';
 import SEO from '../components/SEO';
-
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
@@ -16,8 +15,6 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 
 function Home() {
-  
-
   const seoProps = {
     title: `WeabooCoding – Jasa Coding & Pembuatan Website Profesional`,
     description: `WeabooCoding menyediakan jasa coding profesional, pembuatan website, dan aplikasi untuk bisnis dan mahasiswa di Tangerang Selatan dan sekitarnya.`,
@@ -67,22 +64,25 @@ function Home() {
           }
         }]
       }
-    ]`
+    ]`,
   };
+
   return (
     <>
       <SEO {...seoProps} />
       <Header />
-      <Hero />
-      <About />
-      <HowItWorks />
-      <ServicesSection />
-      <Pricing />
-      <PortfolioSection />
-      <WhyUs />
-      <TestimonialSection />
-      <FAQSection />
-      <ContactSection />
+      <main>
+        <Hero />
+        <About />
+        <HowItWorks />
+        <ServicesSection />
+        <Pricing />
+        <PortfolioSection />
+        <WhyUs />
+        <TestimonialSection />
+        <FAQSection />
+        <ContactSection />
+      </main>
       <Footer />
     </>
   );

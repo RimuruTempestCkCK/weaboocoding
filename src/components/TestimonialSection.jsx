@@ -1,171 +1,147 @@
 import React from 'react';
 
 export default function TestimonialSection() {
-  return (
-    <>
-      {/* TestimonialSection */}
-      
-  <section className="testimonials" id="testimoni">
-    <div className="section-header centered">
-      <div className="section-tag">Testimoni</div>
-      <h2 className="section-title">Kata Klien Kami</h2>
-      <div className="testi-slider-container reveal reveal-zoom">
-      <div className="testi-track">
-        <div className="testi-group">
-          {/*  Card 1  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Sempet panik parah karena deadline skripsi tinggal 2 minggu tapi web Laravel saya masih banyak error database. Untung ketemu WeabooCoding, 3 hari doang beres semua bug-nya + diajarin cara jelasin kodenya ke dosen penguji! 🙏"</p>
-            <div className="testi-author">
-              <div className="avatar av1">RI</div>
-              <div>
-                <div className="author-name">Rendi Ilham</div>
-                <div className="author-role">Mahasiswa Sistem Informasi</div>
-              </div>
-            </div>
-          </div>
-          {/*  Card 2  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Request custom e-commerce pakai Next.js dan payment gateway Midtrans. Timnya asik diajak diskusi, harganya masuk akal buat ukuran startup lokal, dan hasilnya beneran ngacir loadingnya."</p>
-            <div className="testi-author">
-              <div className="avatar av2">BK</div>
-              <div>
-                <div className="author-name">Bintang Kurniawan</div>
-                <div className="author-role">Founder Fashion Brand</div>
-              </div>
-            </div>
-          </div>
-          {/*  Card 3  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Desain UI/UX Figma untuk aplikasi kasir dari mereka bener-bener clean dan modern banget. Tim programmer internal saya juga bilang slice-nya gampang karena desainnya rapi dan terstruktur."</p>
-            <div className="testi-author">
-              <div className="avatar av3">CA</div>
-              <div>
-                <div className="author-name">Citra Ayu</div>
-                <div className="author-role">Product Manager POS App</div>
-              </div>
-            </div>
-          </div>
-          {/*  Card 4  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Bikin aplikasi absensi pakai Flutter + fitur radius GPS buat pegawai lapangan. Awalnya sempet ragu karena harganya miring, tapi ternyata supportnya luar biasa banget. Sampe dibantuin upload ke Playstore juga."</p>
-            <div className="testi-author">
-              <div className="avatar av4">DS</div>
-              <div>
-                <div className="author-name">Dika Saputra</div>
-                <div className="author-role">HRD Perusahaan Kontraktor</div>
-              </div>
-            </div>
-          </div>
-          {/*  Card 5  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Mentok di logic React JS buat state management udah berhari-hari nggak nemu solusinya. Sewa jasa Solve Code WeabooCoding sejam via Zoom, langsung ketahuan masalahnya dimana. Mantap banget mentornya jelasinnya gampang dimengerti."</p>
-            <div className="testi-author">
-              <div className="avatar av5">EF</div>
-              <div>
-                <div className="author-name">Eko Febriansyah</div>
-                <div className="author-role">Junior Frontend Dev</div>
-              </div>
-            </div>
-          </div>
-          {/*  Card 6  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Pesen website company profile buat perusahaan properti saya. Tampilannya elegan, SEO-nya jalan banget, dan bulan lalu masuk halaman 1 Google buat keyword pencarian daerah saya. ROI-nya dapet banget!"</p>
-            <div className="testi-author">
-              <div className="avatar av6">FA</div>
-              <div>
-                <div className="author-name">Fani Anindya</div>
-                <div className="author-role">Direktur Properti & Real Estate</div>
-              </div>
-            </div>
-          </div>
-        </div>
+  const testimonials = [
+    {
+      name: 'Rendi Ilham',
+      role: 'Mahasiswa Sistem Informasi',
+      headline: 'Solusi Skripsi Cepat & Tuntas',
+      avatar: '/images/68f20568d8c28959fddbf700_taskopia-testimonials-author-v1.webp',
+      content:
+        'Sempet panik parah karena deadline skripsi tinggal 2 minggu tapi web Laravel saya masih banyak error database. Untung ketemu WeabooCoding, 3 hari doang beres semua bug-nya + diajarin cara jelasin kodenya ke dosen penguji! 🙏',
+    },
+    {
+      name: 'Bintang Kurniawan',
+      role: 'Founder Fashion Brand',
+      headline: 'Next.js & Midtrans Loading Cepat',
+      avatar: '/images/68f20568de5d5f47117e47e5_taskopia-testimonials-author-v2.webp',
+      content:
+        'Request custom e-commerce pakai Next.js dan payment gateway Midtrans. Timnya asik diajak diskusi, harganya masuk akal buat ukuran startup lokal, dan hasilnya beneran ngacir loadingnya.',
+    },
+    {
+      name: 'Citra Ayu',
+      role: 'Product Manager POS App',
+      headline: 'Desain UI/UX Figma Sangat Rapi',
+      avatar: '/images/68f2056835f743b2678916ad_taskopia-testimonials-author-v3.webp',
+      content:
+        'Desain UI/UX Figma untuk aplikasi kasir dari mereka bener-bener clean dan modern banget. Tim programmer internal saya juga bilang slice-nya gampang karena desainnya rapi dan terstruktur.',
+    },
+    {
+      name: 'Dika Saputra',
+      role: 'HRD Perusahaan Kontraktor',
+      headline: 'App Absensi Flutter & GPS Radius',
+      avatar: '/images/68f20568d8c28959fddbf700_taskopia-testimonials-author-v1.webp',
+      content:
+        'Bikin aplikasi absensi pakai Flutter + fitur radius GPS buat pegawai lapangan. Awalnya sempet ragu karena harganya miring, tapi ternyata supportnya luar biasa banget. Sampe dibantuin upload ke Playstore juga.',
+    },
+    {
+      name: 'Eko Febriansyah',
+      role: 'Junior Frontend Dev',
+      headline: 'Mentoring State Management Jelas',
+      avatar: '/images/68f20568de5d5f47117e47e5_taskopia-testimonials-author-v2.webp',
+      content:
+        'Mentok di logic React JS buat state management udah berhari-hari nggak nemu solusinya. Sewa jasa Solve Code WeabooCoding sejam via Zoom, langsung ketahuan masalahnya dimana. Mantap banget mentornya jelasinnya gampang dimengerti.',
+    },
+    {
+      name: 'Fani Anindya',
+      role: 'Direktur Properti & Real Estate',
+      headline: 'Halaman 1 Google & ROI Terbukti',
+      avatar: '/images/68f2056835f743b2678916ad_taskopia-testimonials-author-v3.webp',
+      content:
+        'Pesen website company profile buat perusahaan properti saya. Tampilannya elegan, SEO-nya jalan banget, dan bulan lalu masuk halaman 1 Google buat keyword pencarian daerah saya. ROI-nya dapet banget!',
+    },
+  ];
 
-        <div className="testi-group">
-          {/*  Card 1  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Sempet panik parah karena deadline skripsi tinggal 2 minggu tapi web Laravel saya masih banyak error database. Untung ketemu WeabooCoding, 3 hari doang beres semua bug-nya + diajarin cara jelasin kodenya ke dosen penguji! 🙏"</p>
-            <div className="testi-author">
-              <div className="avatar av1">RI</div>
-              <div>
-                <div className="author-name">Rendi Ilham</div>
-                <div className="author-role">Mahasiswa Sistem Informasi</div>
+  return (
+    <section className="rt-testimonials-v1" id="testimoni" style={{ padding: '80px 0', backgroundColor: '#0d0728' }}>
+      <div className="w-layout-blockcontainer rt-container-extra-large w-container">
+        <div className="rt-testimonials-v1-contanner rt-overflow-hidden" style={{ padding: '3.5rem 2rem', backgroundColor: 'transparent' }}>
+          <div className="rt-testimonials-v1-container rt-position-relative" style={{ maxWidth: '1100px', margin: '0 auto', padding: 0 }}>
+            {/* Heading */}
+            <div className="rt-heading-bottom-gap" style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 3rem auto' }} data-aos="fade-up" data-aos-duration="700">
+              <div className="rt-sub-gap" style={{ justifyContent: 'center', display: 'flex' }}>
+                <div className="rt-sub-text rt-text-color-white" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
+                  Testimoni Klien
+                </div>
+              </div>
+              <div className="rt-overflow-hidden">
+                <h2 className="rt-gap-off rt-text-color-white" style={{ fontSize: 'clamp(1.8rem, 3.2vw, 2.5rem)', marginTop: '0.6rem', lineHeight: 1.25 }}>
+                  Pengalaman Nyata Klien yang <span className="rt-color-periwinkle-gray">Bekerja Sama Bersama Kami</span>
+                </h2>
               </div>
             </div>
-          </div>
-          {/*  Card 2  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Request custom e-commerce pakai Next.js dan payment gateway Midtrans. Timnya asik diajak diskusi, harganya masuk akal buat ukuran startup lokal, dan hasilnya beneran ngacir loadingnya."</p>
-            <div className="testi-author">
-              <div className="avatar av2">BK</div>
-              <div>
-                <div className="author-name">Bintang Kurniawan</div>
-                <div className="author-role">Founder Fashion Brand</div>
-              </div>
-            </div>
-          </div>
-          {/*  Card 3  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Desain UI/UX Figma untuk aplikasi kasir dari mereka bener-bener clean dan modern banget. Tim programmer internal saya juga bilang slice-nya gampang karena desainnya rapi dan terstruktur."</p>
-            <div className="testi-author">
-              <div className="avatar av3">CA</div>
-              <div>
-                <div className="author-name">Citra Ayu</div>
-                <div className="author-role">Product Manager POS App</div>
-              </div>
-            </div>
-          </div>
-          {/*  Card 4  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Bikin aplikasi absensi pakai Flutter + fitur radius GPS buat pegawai lapangan. Awalnya sempet ragu karena harganya miring, tapi ternyata supportnya luar biasa banget. Sampe dibantuin upload ke Playstore juga."</p>
-            <div className="testi-author">
-              <div className="avatar av4">DS</div>
-              <div>
-                <div className="author-name">Dika Saputra</div>
-                <div className="author-role">HRD Perusahaan Kontraktor</div>
-              </div>
-            </div>
-          </div>
-          {/*  Card 5  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Mentok di logic React JS buat state management udah berhari-hari nggak nemu solusinya. Sewa jasa Solve Code WeabooCoding sejam via Zoom, langsung ketahuan masalahnya dimana. Mantap banget mentornya jelasinnya gampang dimengerti."</p>
-            <div className="testi-author">
-              <div className="avatar av5">EF</div>
-              <div>
-                <div className="author-name">Eko Febriansyah</div>
-                <div className="author-role">Junior Frontend Dev</div>
-              </div>
-            </div>
-          </div>
-          {/*  Card 6  */}
-          <div className="testi-card">
-            <div className="stars">★★★★★</div>
-            <p className="testi-text">"Pesen website company profile buat perusahaan properti saya. Tampilannya elegan, SEO-nya jalan banget, dan bulan lalu masuk halaman 1 Google buat keyword pencarian daerah saya. ROI-nya dapet banget!"</p>
-            <div className="testi-author">
-              <div className="avatar av6">FA</div>
-              <div>
-                <div className="author-name">Fani Anindya</div>
-                <div className="author-role">Direktur Properti & Real Estate</div>
-              </div>
+
+            {/* Testimonials Grid */}
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(310px, 1fr))',
+                gap: '1.5rem',
+              }}
+            >
+              {testimonials.map((t, idx) => (
+                <div
+                  key={idx}
+                  className="rt-card-hover"
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                  data-aos-delay={(idx % 3) * 120}
+                  style={{
+                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                    backdropFilter: 'blur(16px)',
+                    WebkitBackdropFilter: 'blur(16px)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    borderRadius: '16px',
+                    padding: '1.75rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <div>
+                    {/* Author & Rating */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.9rem', marginBottom: '1.1rem' }}>
+                      <div
+                        style={{
+                          width: '48px',
+                          height: '48px',
+                          borderRadius: '50%',
+                          overflow: 'hidden',
+                          flexShrink: 0,
+                          border: '2px solid rgba(255, 255, 255, 0.2)',
+                        }}
+                      >
+                        <img src={t.avatar} loading="lazy" alt={t.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      </div>
+                      <div style={{ minWidth: 0, flex: 1 }}>
+                        <div style={{ display: 'flex', gap: '3px', marginBottom: '4px' }}>
+                          {[...Array(5)].map((_, si) => (
+                            <span key={si} style={{ color: '#ffb800', fontSize: '0.9rem', lineHeight: 1 }}>★</span>
+                          ))}
+                        </div>
+                        <div style={{ fontWeight: 700, fontSize: '0.98rem', color: '#ffffff', lineHeight: 1.2 }}>
+                          {t.name}
+                        </div>
+                        <div style={{ color: '#9fa8da', fontSize: '0.8rem', marginTop: '2px' }}>{t.role}</div>
+                      </div>
+                    </div>
+
+                    {/* Headline and Quote */}
+                    <div>
+                      <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#ffffff', marginBottom: '0.5rem', lineHeight: 1.35 }}>
+                        "{t.headline}"
+                      </div>
+                      <p className="rt-gap-off" style={{ fontSize: '0.9rem', lineHeight: 1.65, color: '#c5cae9' }}>
+                        {t.content}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
-  </section>
-
-  
-    </>
+    </section>
   );
 }
