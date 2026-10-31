@@ -1,3 +1,9 @@
+// Check for Vercel/CI environment
+if (process.env.VERCEL || process.env.CI) {
+  console.log('⚡ Detected Vercel/CI environment: Skipping Puppeteer prerendering. Static SPA build preserved.');
+  process.exit(0);
+}
+
 const puppeteer = require('puppeteer');
 const sirv = require('sirv');
 const http = require('http');

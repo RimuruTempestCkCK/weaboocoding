@@ -24,7 +24,7 @@ export default function ServicesSection() {
     {
       title: 'UI/UX Design Modern',
       desc: 'Desain antarmuka pengguna (Figma) yang intuitif, estetis, dan user-friendly, siap di-slice oleh tim developer Anda.',
-      icon: '/images/6916ec635353353be914aafc_Vector_20_32_.svg',
+      icon: '/images/69535455bf807cdad57199e1_figma_2_.svg',
       tag: 'Figma UI/UX',
     },
     {
@@ -42,7 +42,7 @@ export default function ServicesSection() {
     {
       title: 'Integrasi AI & Automasi Bot',
       desc: 'Penerapan OpenAI / ChatGPT API, WhatsApp Chatbot pintar, dan automasi proses bisnis untuk efisiensi operasional.',
-      icon: '/images/69142f6f3f26d48453053172_taskopia-home-one-integration-icone.svg',
+      icon: '/images/6916f56ad8ac594c1debbb97_Vector_20_37_.svg',
       tag: 'AI & Bot',
     },
     {

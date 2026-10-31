@@ -387,3 +387,54 @@ h1, h2, h3, h4, h5, h6 {
 .rt-btn-outline-white:hover .rt-button-text {
   color: #1a0b54 !important;
 }
+
+/* ============================================================
+   Taskopia Native Testimonials Marquee Animation (.rt-marquee-v1-animation)
+   Bergerak mulus dari kanan ke kiri tanpa henti (Infinite Loop)
+   Sesuai animasi Template Taskopia /taskopia/home-one.html
+   ============================================================ */
+@keyframes rtMarqueeTaskopia {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.rt-marquee-v1-animation {
+  display: flex !important;
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  user-select: none;
+}
+
+.rt-testimonials-v1-content {
+  display: flex !important;
+  flex: none !important;
+  animation: rtMarqueeTaskopia 32s linear infinite !important;
+  will-change: transform;
+}
+
+.rt-marquee-v1-animation:hover .rt-testimonials-v1-content {
+  animation-play-state: paused;
+}
+
+.rt-testimonials-item-wrapper {
+  flex: none !important;
+  width: 380px !important;
+  max-width: 85vw !important;
+  padding-right: 1.25rem !important;
+}
+
+.rt-testimonials-v1-item {
+  height: 100% !important;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease !important;
+}
+
+.rt-testimonials-v1-item:hover {
+  transform: translateY(-5px) !important;
+  border-color: rgba(24, 51, 254, 0.5) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3) !important;
+}

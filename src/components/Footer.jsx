@@ -59,11 +59,11 @@ function Footer() {
                 <a href="/#about" className="rt-footer-link w-variant-4e53b383-59ff-12b8-0d77-36138c3c95c0">
                   Tentang Kami
                 </a>
-                <a href="/#services" className="rt-footer-link w-variant-4e53b383-59ff-12b8-0d77-36138c3c95c0">
-                  Layanan
-                </a>
                 <a href="/#pricing" className="rt-footer-link w-variant-4e53b383-59ff-12b8-0d77-36138c3c95c0">
                   Paket Harga
+                </a>
+                <a href="/#services" className="rt-footer-link w-variant-4e53b383-59ff-12b8-0d77-36138c3c95c0">
+                  Layanan
                 </a>
                 <a href="/#portfolio" className="rt-footer-link w-variant-4e53b383-59ff-12b8-0d77-36138c3c95c0">
                   Portfolio

@@ -52,17 +52,75 @@ export default function TestimonialSection() {
     },
   ];
 
-  return (
-    <section className="rt-testimonials-v1" id="testimoni" style={{ padding: '80px 0', backgroundColor: '#0d0728' }}>
-      <div className="w-layout-blockcontainer rt-container-extra-large w-container">
-        <div className="rt-testimonials-v1-contanner rt-overflow-hidden" style={{ padding: '3.5rem 2rem', backgroundColor: 'transparent' }}>
-          <div className="rt-testimonials-v1-container rt-position-relative" style={{ maxWidth: '1100px', margin: '0 auto', padding: 0 }}>
-            {/* Heading */}
-            <div className="rt-heading-bottom-gap" style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 3rem auto' }} data-aos="fade-up" data-aos-duration="700">
-              <div className="rt-sub-gap" style={{ justifyContent: 'center', display: 'flex' }}>
-                <div className="rt-sub-text rt-text-color-white" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
-                  Testimoni Klien
+  const renderCardList = () => (
+    <div className="rt-testimonials-v1-content">
+      {testimonials.map((t, idx) => (
+        <div key={idx} className="rt-testimonials-item-wrapper">
+          <div className="rt-testimonials-v1-item">
+            <div className="rt-testimonials-v1-item-top">
+              <div className="rt-testimonials-author">
+                <img
+                  src={t.avatar}
+                  loading="lazy"
+                  alt={t.name}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+              <div className="rt-testimonials-v1-item-top-right">
+                <div style={{ display: 'flex', gap: '3px', alignItems: 'center' }}>
+                  {[...Array(5)].map((_, si) => (
+                    <img
+                      key={si}
+                      src="/images/68f1ff9d3485bfaf19e14f3e_star_20_2_.svg"
+                      loading="lazy"
+                      alt="★"
+                      className="rt-star-test-v1"
+                      style={{ width: '15px', height: '15px' }}
+                    />
+                  ))}
                 </div>
+                <div>
+                  <div className="rt-small-name rt-text-color-white" style={{ fontWeight: 700, fontSize: '0.98rem' }}>
+                    {t.name}
+                  </div>
+                  <div style={{ color: '#9fa8da', fontSize: '0.8rem', marginTop: '1px' }}>
+                    {t.role}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rt-testimonials-v1-item-inner">
+              <div
+                className="rt-small-name rt-text-color-white rt-small-heading-para-gap"
+                style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.5rem', lineHeight: 1.35 }}
+              >
+                "{t.headline}"
+              </div>
+              <p className="rt-color-pale-periwinkle rt-gap-off" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
+                {t.content}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
+  return (
+    <section className="rt-testimonials-v1" id="testimoni" style={{ padding: '80px 0' }}>
+      <div className="w-layout-blockcontainer rt-container-extra-large w-container">
+        <div className="rt-testimonials-v1-contanner rt-overflow-hidden">
+          <div className="rt-testimonials-v1-container rt-position-relative">
+            {/* Heading Sesuai Template Taskopia home-one.html */}
+            <div
+              className="rt-testimonials-v1-top rt-heading-bottom-gap"
+              style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto' }}
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
+              <div className="rt-sub-gap" style={{ justifyContent: 'center', display: 'flex' }}>
+                <div className="rt-sub-text">Testimoni Klien</div>
               </div>
               <div className="rt-overflow-hidden">
                 <h2 className="rt-gap-off rt-text-color-white" style={{ fontSize: 'clamp(1.8rem, 3.2vw, 2.5rem)', marginTop: '0.6rem', lineHeight: 1.25 }}>
@@ -71,75 +129,14 @@ export default function TestimonialSection() {
               </div>
             </div>
 
-            {/* Testimonials Grid */}
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(310px, 1fr))',
-                gap: '1.5rem',
-              }}
-            >
-              {testimonials.map((t, idx) => (
-                <div
-                  key={idx}
-                  className="rt-card-hover"
-                  data-aos="fade-up"
-                  data-aos-duration="600"
-                  data-aos-delay={(idx % 3) * 120}
-                  style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                    backdropFilter: 'blur(16px)',
-                    WebkitBackdropFilter: 'blur(16px)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    borderRadius: '16px',
-                    padding: '1.75rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <div>
-                    {/* Author & Rating */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.9rem', marginBottom: '1.1rem' }}>
-                      <div
-                        style={{
-                          width: '48px',
-                          height: '48px',
-                          borderRadius: '50%',
-                          overflow: 'hidden',
-                          flexShrink: 0,
-                          border: '2px solid rgba(255, 255, 255, 0.2)',
-                        }}
-                      >
-                        <img src={t.avatar} loading="lazy" alt={t.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                      </div>
-                      <div style={{ minWidth: 0, flex: 1 }}>
-                        <div style={{ display: 'flex', gap: '3px', marginBottom: '4px' }}>
-                          {[...Array(5)].map((_, si) => (
-                            <span key={si} style={{ color: '#ffb800', fontSize: '0.9rem', lineHeight: 1 }}>★</span>
-                          ))}
-                        </div>
-                        <div style={{ fontWeight: 700, fontSize: '0.98rem', color: '#ffffff', lineHeight: 1.2 }}>
-                          {t.name}
-                        </div>
-                        <div style={{ color: '#9fa8da', fontSize: '0.8rem', marginTop: '2px' }}>{t.role}</div>
-                      </div>
-                    </div>
-
-                    {/* Headline and Quote */}
-                    <div>
-                      <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#ffffff', marginBottom: '0.5rem', lineHeight: 1.35 }}>
-                        "{t.headline}"
-                      </div>
-                      <p className="rt-gap-off" style={{ fontSize: '0.9rem', lineHeight: 1.65, color: '#c5cae9' }}>
-                        {t.content}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            {/* Continuous Running Marquee Animation Sesuai Struktur Asli Template Taskopia */}
+            <div className="rt-marquee-v1-animation rt-overflow-hidden" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+              {renderCardList()}
+              {renderCardList()}
+              <div className="rt-testimonials-overlay"></div>
             </div>
           </div>
+          <div className="rt-testimonials-v1-overlay"></div>
         </div>
       </div>
     </section>

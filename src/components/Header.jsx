@@ -23,8 +23,8 @@ function Header() {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/#about' },
-    { label: 'Services', href: '/#services' },
     { label: 'Pricing', href: '/#pricing' },
+    { label: 'Services', href: '/#services' },
     { label: 'Portfolio', href: '/#portfolio' },
     { label: 'Blog', href: '/blog/' },
     { label: 'Kota', href: '/kota/' },

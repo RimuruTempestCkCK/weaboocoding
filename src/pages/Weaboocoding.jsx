@@ -62,8 +62,8 @@ function Weaboocoding() {
         <Hero />
         <About />
         <HowItWorks />
-        <ServicesSection />
         <Pricing />
+        <ServicesSection />
         <PortfolioSection />
         <WhyUs />
         <TestimonialSection />
