@@ -8,7 +8,7 @@ export default function Pricing() {
       badge: 'MAHASISWA',
       name: 'Paket Mahasiswa',
       sub: 'Solusi cepat untuk tugas kuliah, praktikum, dan skripsi IT.',
-      price: 'Rp 200rb',
+      price: 'Mulai dari Rp 200rb',
       unit: '/ project',
       popular: false,
       features: [
@@ -26,7 +26,7 @@ export default function Pricing() {
       badge: 'PALING POPULER',
       name: 'Profile / UMKM',
       sub: 'Website profesional siap pakai untuk mendongkrak kredibilitas bisnis.',
-      price: 'Rp 1 Juta',
+      price: 'Mulai dari Rp 1 Juta',
       unit: '/ paket',
       popular: true,
       features: [
