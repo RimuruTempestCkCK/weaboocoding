@@ -231,10 +231,10 @@ function KotaDetail() {
                 </a>
                 <Link
                   to="/kota/"
-                  className="rt-button-body rt-bg-color"
-                  style={{ textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)', color: '#ffffff' }}
+                  className="rt-button-body rt-btn-outline-white"
+                  style={{ textDecoration: 'none' }}
                 >
-                  <div className="rt-button-text" style={{ color: '#ffffff' }}>Lihat Kota Lain</div>
+                  <div className="rt-button-text">Lihat Kota Lain</div>
                   <div className="rt-button-body-overlay"></div>
                 </Link>
               </div>

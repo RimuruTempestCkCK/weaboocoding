@@ -173,3 +173,171 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   transform: translateX(0);
 }
+
+/* ============================================================
+   Taskopia Template Precision Alignments & Visual Hover Polish
+   ============================================================ */
+
+/* Navbar Brand & Links */
+.rt-navbar-logo {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+}
+
+.rt-navbar-dropdown-toggle {
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.rt-navbar-dropdown-toggle .rt-menu-text {
+  transition: color 0.25s ease !important;
+}
+
+.rt-navbar-dropdown-toggle:hover .rt-menu-text {
+  color: #1833fe !important;
+}
+
+/* Footer Hover Consistency: pastikan semua link footer memiliki kontras tajam */
+.rt-footer-link {
+  transition: color 0.25s ease, opacity 0.25s ease !important;
+}
+
+.rt-footer-link:hover,
+.rt-footer-link:hover:where(.w-variant-4e53b383-59ff-12b8-0d77-36138c3c95c0) {
+  color: #1833fe !important;
+}
+
+/* ============================================================
+   Button Hover & Text Contrast Engine
+   Mengikuti animasi slider overlay Taskopia yang mulus & kontras sempurna
+   ============================================================ */
+
+/* Base Tombol: pastikan overflow hidden agar overlay slide tidak bocor */
+.rt-button-body {
+  position: relative !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease !important;
+}
+
+.rt-button-body:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(24, 51, 254, 0.25) !important;
+}
+
+/* Teks Tombol */
+.rt-button-text {
+  position: relative !important;
+  z-index: 5 !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  transition: color 0.25s ease !important;
+}
+
+/* Slider Overlay: Taskopia asli menggunakan translateY slide in */
+.rt-button-body .rt-button-body-overlay {
+  position: absolute !important;
+  inset: 0% !important;
+  width: 100% !important;
+  height: 120% !important;
+  transform: translate(0, 100%) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  pointer-events: none !important;
+}
+
+/* Saat di-hover, overlay slide ke atas mengisi tombol */
+.rt-button-body:hover .rt-button-body-overlay {
+  transform: translate(0, 0%) !important;
+}
+
+/* 1. TOMBOL UTAMA (SOLID VIVID BLUE #1833fe / #2b4bee)
+   Normal: Background Vivid Blue, Teks Putih
+   Hover: Overlay Dark Indigo (#1a0b54) slide in, Teks tetap Putih Terang */
+.rt-button-body:not(.rt-bg-color):not(.rt-nav-btn):not(.rt-button-featured) {
+  background-color: #1833fe !important;
+}
+.rt-button-body:not(.rt-bg-color):not(.rt-nav-btn):not(.rt-button-featured) .rt-button-text {
+  color: #ffffff !important;
+}
+.rt-button-body:not(.rt-bg-color):not(.rt-nav-btn):not(.rt-button-featured) .rt-button-body-overlay {
+  background-color: #1a0b54 !important;
+  z-index: 2 !important;
+}
+.rt-button-body:not(.rt-bg-color):not(.rt-nav-btn):not(.rt-button-featured):hover .rt-button-text {
+  color: #ffffff !important;
+}
+
+/* 2. TOMBOL OUTLINE / NAV (.rt-nav-btn, .rt-btn-color-nav)
+   Normal: Background Putih, Border Vivid Blue (#1833fe), Teks Biru Tajam (#1833fe)
+   Hover: Overlay Vivid Blue (#1833fe) slide in, Teks menjadi Putih Terang (#ffffff) */
+.rt-button-body.rt-nav-btn {
+  background-color: #ffffff !important;
+  border: 1px solid #1833fe !important;
+}
+.rt-button-body.rt-nav-btn .rt-button-text,
+.rt-button-text.rt-btn-color-nav {
+  color: #1833fe !important;
+}
+.rt-button-body.rt-nav-btn .rt-button-body-overlay,
+.rt-button-body-overlay.rt-nav-overlay {
+  background-color: #1833fe !important;
+  z-index: 2 !important;
+}
+.rt-button-body.rt-nav-btn:hover .rt-button-text,
+.rt-button-body.rt-nav-btn:hover .rt-button-text.rt-btn-color-nav {
+  color: #ffffff !important;
+}
+
+/* 3. TOMBOL PUTIH KONTRAS (.rt-bg-color, .rt-btn-color)
+   Normal: Background Putih, Teks Dark Indigo (#1a0b54)
+   Hover: Overlay Vivid Blue (#1833fe) slide in, Teks menjadi Putih Terang (#ffffff) */
+.rt-button-body.rt-bg-color {
+  background-color: #ffffff !important;
+}
+.rt-button-body.rt-bg-color .rt-button-text,
+.rt-button-body.rt-bg-color .rt-button-text.rt-btn-color {
+  color: #1a0b54 !important;
+}
+.rt-button-body.rt-bg-color .rt-button-body-overlay,
+.rt-button-body.rt-bg-color .rt-button-body-overlay.rt-color-blue {
+  background-color: #1833fe !important;
+  z-index: 2 !important;
+}
+.rt-button-body.rt-bg-color:hover .rt-button-text,
+.rt-button-body.rt-bg-color:hover .rt-button-text.rt-btn-color {
+  color: #ffffff !important;
+}
+
+/* 4. PRICING REKOMENDASI (.rt-button-featured, .rt-blue-white)
+   Normal: Background Solid Blue, Teks Putih
+   Hover: Overlay Putih slide in, Teks menjadi Dark Indigo (#1a0b54) */
+.rt-button-body.rt-button-featured {
+  background-color: #1833fe !important;
+}
+.rt-button-body.rt-button-featured .rt-button-text {
+  color: #ffffff !important;
+}
+.rt-button-body.rt-button-featured .rt-button-body-overlay {
+  background-color: #ffffff !important;
+  z-index: 2 !important;
+}
+.rt-button-body.rt-button-featured:hover .rt-button-text {
+  color: #1a0b54 !important;
+}
+
+/* 5. Tombol Sekunder di Card Gelap (KotaDetail "Lihat Kota Lain") */
+.rt-btn-outline-white {
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+.rt-btn-outline-white .rt-button-text {
+  color: #ffffff !important;
+}
+.rt-btn-outline-white .rt-button-body-overlay {
+  background-color: #ffffff !important;
+  z-index: 2 !important;
+}
+.rt-btn-outline-white:hover .rt-button-text {
+  color: #1a0b54 !important;
+}

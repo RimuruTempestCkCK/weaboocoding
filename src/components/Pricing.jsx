@@ -123,7 +123,7 @@ export default function Pricing() {
                         onClick={() => track('Klik_WA')}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rt-button-body w-inline-block"
+                        className="rt-button-body rt-button-featured w-inline-block"
                         style={{ textDecoration: 'none', width: '100%', textAlign: 'center' }}
                       >
                         <div className="rt-button-text rt-blue-white">{p.ctaText}</div>
