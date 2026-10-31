@@ -19,7 +19,7 @@ export default function ServicesSection() {
       title: 'Joki Tugas Coding & Skripsi IT',
       desc: 'Bantuan pengerjaan tugas kuliah, sistem informasi, prototipe skripsi, hingga bimbingan kode untuk sidang tugas akhir IT.',
       icon: '/images/6916f00db3051e5aed09bd3f_Group_202085663576.svg',
-      tag: 'Mahasiswa / Akademik',
+      tag: 'Akademik IT',
     },
     {
       title: 'UI/UX Design Modern',
@@ -31,7 +31,7 @@ export default function ServicesSection() {
       title: 'Solve Code & Debugging Error',
       desc: 'Mengatasi bug membandel, database error, perbaikan syntax logic, hingga optimasi kecepatan website dalam hitungan jam.',
       icon: '/images/6916ec6339f890a80905a69b_Vector_20_33_.svg',
-      tag: 'Troubleshooting',
+      tag: 'Bug Fixing',
     },
     {
       title: 'Database & Backend Development',
@@ -43,7 +43,7 @@ export default function ServicesSection() {
       title: 'Integrasi AI & Automasi Bot',
       desc: 'Penerapan OpenAI / ChatGPT API, WhatsApp Chatbot pintar, dan automasi proses bisnis untuk efisiensi operasional.',
       icon: '/images/69142f6f3f26d48453053172_taskopia-home-one-integration-icone.svg',
-      tag: 'AI & Automation',
+      tag: 'AI & Bot',
     },
     {
       title: 'Mentoring Coding 1-on-1',
@@ -54,7 +54,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="rt-feaures-v3" style={{ padding: '90px 0', backgroundColor: '#ffffff' }}>
+    <section id="services" className="rt-feaures-v3" style={{ padding: '95px 0', backgroundColor: '#ffffff' }}>
       <div className="w-layout-blockcontainer rt-container-main w-container">
         {/* Section Header */}
         <div className="rt-tools-iconheading rt-heading-bottom-gap" data-aos="fade-up" data-aos-duration="700">
@@ -64,7 +64,7 @@ export default function ServicesSection() {
           <h2 className="rt-gap-off rt-desktop-text-center">
             Solusi Coding Terlengkap <span className="rt-color-periwinkle-gray">untuk Kebutuhan Digitalmu</span>
           </h2>
-          <p className="rt-hero-v1-top-padding rt-gap-off rt-desktop-text-center" style={{ maxWidth: '650px', margin: '15px auto 0' }}>
+          <p className="rt-hero-v1-top-padding rt-gap-off rt-desktop-text-center" style={{ maxWidth: '640px', margin: '15px auto 0' }}>
             Berbagai jasa coding profesional dan pengembangan perangkat lunak siap membantu keberhasilan proyek Anda.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function ServicesSection() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))',
             gap: '1.75rem',
             marginTop: '3.5rem',
           }}
@@ -84,68 +84,71 @@ export default function ServicesSection() {
               className="rt-card-hover"
               data-aos="fade-up"
               data-aos-duration="600"
-              data-aos-delay={(idx % 4) * 100}
+              data-aos-delay={(idx % 4) * 90}
               style={{
                 backgroundColor: '#ffffff',
-                border: '1px solid rgba(26,11,84,0.08)',
-                borderRadius: '16px',
+                border: '1px solid rgba(26, 11, 84, 0.08)',
+                borderRadius: '18px',
                 padding: '2.2rem 1.8rem',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.03)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
               }}
             >
               <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
+                {/* Header card: Icon + Pill */}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.4rem' }}>
                   <div
                     style={{
                       width: '52px',
                       height: '52px',
-                      borderRadius: '12px',
-                      backgroundColor: '#f5f3ff',
+                      borderRadius: '14px',
+                      backgroundColor: '#eff2ff',
+                      border: '1px solid rgba(24, 51, 254, 0.1)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                     }}
                   >
-                    <img src={s.icon} loading="lazy" width="28" height="28" alt={s.title} />
+                    <img src={s.icon} loading="lazy" width="26" height="26" alt={s.title} />
                   </div>
                   <span className="rt-service-pill">
                     {s.tag}
                   </span>
                 </div>
 
-                <div className="rt-text-style-h6" style={{ fontSize: '1.2rem', color: '#1a0b54', marginBottom: '0.65rem', lineHeight: 1.35 }}>
+                {/* Service Title */}
+                <div
+                  className="rt-text-style-h6"
+                  style={{
+                    fontSize: '1.18rem',
+                    fontWeight: 600,
+                    color: '#1a0b54',
+                    marginBottom: '0.75rem',
+                    lineHeight: 1.35,
+                  }}
+                >
                   {s.title}
                 </div>
 
+                {/* Description */}
                 <p className="rt-gap-off" style={{ fontSize: '0.92rem', color: '#554d74', lineHeight: 1.65 }}>
                   {s.desc}
                 </p>
               </div>
 
-              <div style={{ marginTop: '1.75rem', paddingTop: '1.2rem', borderTop: '1px solid rgba(26,11,84,0.06)' }}>
+              {/* Bottom CTA Action Button */}
+              <div style={{ marginTop: '1.8rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(26, 11, 84, 0.06)' }}>
                 <a
                   href={`https://wa.me/6285157558469?text=${encodeURIComponent(`Halo WeabooCoding! Saya tertarik dengan layanan ${s.title}. Boleh tanya detailnya?`)}`}
                   onClick={() => track('Klik_WA')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    color: '#2b4bee',
-                    fontWeight: 600,
-                    fontSize: '0.92rem',
-                    textDecoration: 'none',
-                    fontFamily: 'Geist, sans-serif',
-                    transition: 'gap 0.2s ease',
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.gap = '10px'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.gap = '6px'; }}
+                  className="rt-service-cta"
                 >
-                  Pesan Layanan Ini <span>→</span>
+                  <span>Pesan Layanan Ini</span>
+                  <span aria-hidden="true" style={{ fontSize: '1.05rem', fontWeight: 700, lineHeight: 1 }}>→</span>
                 </a>
               </div>
             </div>
